@@ -1,0 +1,21 @@
+{
+    "name": "james090500/slimtemplate",
+    "description": "My Slim Template for applications",
+    "type": "project",
+    "authors": [
+        {
+            "name": "James Harrison",
+            "email": "james@fasttortoise.co.uk"
+        }
+    ],
+    "require": {
+        "slim/slim": "4.*",
+        "catfan/medoo": "^1.7",
+        "slim/twig-view": "3.0.0-beta",
+        "slim/psr7": "^0.6.0",
+        "slim/http": "^0.8.0",
+        "slim/views": "^0.1.3",
+        "vlucas/phpdotenv": "^4.1",
+        "php-di/php-di": "^6.0"
+    }
+}
