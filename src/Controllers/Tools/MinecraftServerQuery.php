@@ -34,9 +34,9 @@
             $port;
 
             if($request->getMethod() == "POST") {
-                $server = $request->getParsedBody()['server'];
-                $port = explode(":", $server);
-                $port = isset($port[1]) ? $port[1] : 25565;
+                $values = explode(":", $request->getParsedBody()['server']);
+                $server = $values[0];
+                $port = isset($values[1]) ? $values[1] : 25565;
                 return $response->withRedirect("/tools/minecraft-server-query/$server/$port", 302);
             } else {
                 $server = $args['server'];
@@ -108,17 +108,24 @@
 
             //Server MOTD
 
-            $motd = MinecraftMessageTranslator::translateMessage($query['description']);
+            $motd = MinecraftMessageTranslator::translateMotd($query['description']);
             $offset = 0;
+            $yPos = 42;
             foreach($motd as $msg) {
                 $font = new Font($msg['text']);
-                $font->file('../Public/assets/fonts/1_Minecraft-Regular.otf');
-                $font->size(30);
+                $font->file(MinecraftMessageTranslator::getFont($msg));
+                $font->size(31);
                 $font->color($msg['color']);
                 $font->valign('top');
 
-                $font->applyToImage($background, 111 + $offset, 42);
+                $font->applyToImage($background, 100 + $offset, $yPos);
                 $offset += $font->getBoxSize()['width'];
+
+                if(strpos($msg['text'], "\n") !== false) {
+                    $yPos = 72;
+                    $offset = new Font(substr($msg['text'], strpos($msg['text'], "\n")));
+                    $offset = $offset->file(MinecraftMessageTranslator::getFont($msg))->size(31)->getBoxSize()['width'];
+                }
             }
 
             return $response->write($background->encode('jpg'))->withHeader('Content-Type', 'image/jpg');

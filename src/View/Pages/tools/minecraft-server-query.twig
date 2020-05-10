@@ -9,7 +9,7 @@
             <form method="POST" action="/tools/minecraft-server-query">
                 <div class="form-group">
                     <label>Server IP</label>
-                    <input type="text" name="server" class="form-control" placeholder="play.capecraft.net:25565">
+                    <input type="text" name="server" id="server" class="form-control" placeholder="play.capecraft.net:25565">
                     <small class="form-text text-muted">By default this pings on 25565. If you want a different port please specify</small>
                 </div>
                 <button type="submit" class="btn btn-primary">Ping!</button>
@@ -49,6 +49,7 @@
             </div>
         </div>
     </div>
+    <script>$('#server').val("{{server}}:{{port}}")</script>
     {% endif %}
 </div>
 {% endblock %}
