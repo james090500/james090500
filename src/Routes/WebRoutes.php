@@ -14,6 +14,7 @@
         $app->get('/minecraft-server-query', [ MinecraftServerQuery::class, 'getHome']);
         $app->post('/minecraft-server-query', [ MinecraftServerQuery::class, 'getServer']);
         $app->get('/minecraft-server-query/{server}[/{port}]', [ MinecraftServerQuery::class, 'getServer']);
+        $app->get('/minecraft-server-query/{server}/{port}/motd', [ MinecraftServerQuery::class, 'getServerMotd']);
       });
     }
   }

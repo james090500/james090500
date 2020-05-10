@@ -6,7 +6,7 @@
         <div class="col-lg-8">
             <h1>Minecraft Server Query</h1>
             <p>Will Query a server and get as much information as possible from it</p>
-            <form method="POST">
+            <form method="POST" action="/tools/minecraft-server-query">
                 <div class="form-group">
                     <label>Server IP</label>
                     <input type="text" name="server" class="form-control" placeholder="play.capecraft.net:25565">
@@ -16,29 +16,39 @@
             </form>            
         </div>
     </div>
+    {% if query %}
     <hr>
     <div class="row justify-content-center">        
         <div class="col-lg-1">
             <img src="{{query['favicon']}}" class="img-fluid">
         </div>
         <div class="col-lg-7">
-        <table class="table table-borderless">
-            <tbody>
-                <tr>
-                    <th scope="row">MOTD</th>
-                    <td><img class="img-fluid" src="/assets/img/tools/minecraft-server-query.jpg"></td>
-                </tr>            
-                <tr>
-                    <th scope="row">Version</th>
-                    <td><span class="badge badge-primary">{{query['version']['name']}}</span></td>
-                </tr>
-                <tr>
-                    <th scope="row">Players</th>
-                    <td>{{query['players']['online']}}/{{query['players']['max']}}</td>
-                </tr>
-            </tbody>
-        </table>
+            <div class="table-response">
+                <table class="table table-borderless">
+                    <tbody>
+                        <tr>
+                            <th scope="row">MOTD</th>
+                            <td><img class="img-fluid" src="/tools/minecraft-server-query/{{server}}/{{port}}/motd"></td>
+                        </tr>            
+                        <tr>
+                            <th scope="row">Version</th>
+                            <td><span class="badge badge-primary">{{query['version']['name']}}</span></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Players</th>
+                            <td>{{query['players']['online']}}/{{query['players']['max']}}</td>
+                        </tr>             
+                    </tbody>
+                </table>
+            </div>
+            <a data-toggle="collapse" href="#rawResponse">Raw Response</a>
+            <div class="collapse" id="rawResponse">
+                <div class="card card-body">
+                    {{query|json_encode()}}
+                </div>
+            </div>
         </div>
-    </div>    
+    </div>
+    {% endif %}
 </div>
 {% endblock %}

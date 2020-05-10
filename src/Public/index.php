@@ -49,10 +49,12 @@
      * @param  Class $class The needed class
      */
     private static function classAutoloader($class) {
-      $class = str_replace("james090500\\", "", $class);
-      $class = str_replace("\\", "/", $class);
-      $class = "../".$class.".php";
-      require_once($class);
+      if(strpos($class, "james090500") !== false) {
+        $class = str_replace("james090500\\", "", $class);
+        $class = str_replace("\\", "/", $class);
+        $class = "../".$class.".php";
+        require_once($class);
+      }
     }
 
     /**

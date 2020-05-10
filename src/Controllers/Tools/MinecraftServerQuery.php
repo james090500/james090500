@@ -3,8 +3,11 @@
     Namespace james090500\Controllers\Tools;
 
     use \james090500\Controllers\Controller;
+    use \james090500\Utilities\MinecraftMessageTranslator;
     use xPaw\MinecraftPing;
-	use xPaw\MinecraftPingException;
+    use xPaw\MinecraftPingException;
+    use Intervention\Image\ImageManagerStatic as Image;
+    use Intervention\Image\Gd\Font;
 
     class MinecraftServerQuery extends Controller {
 
@@ -43,6 +46,8 @@
             $query = new MinecraftPing($server, $port);
 
             return self::render($response, 'tools/minecraft-server-query', [
+                'server' => $server,
+                'port' => $port,
                 'query' => $query->Query()
             ]);
         }
@@ -55,30 +60,67 @@
          * @return Twig               The view
          */
         public static function getServerMotd($request, $response, $args) {
-            $color = array();
-            $color['black'] = "000000";
-            $color['dark_blue'] = "0000AA";
-            $color['dark_green'] = "00AA00";
-            $color['dark_aqua'] = "00AAAA";
-            $color['dark_red'] = "AA0000";
-            $color['dark_purple'] = "AA00AA";
-            $color['gold'] = "FFAA00";
-            $color['gray'] = "AAAAAA";
-            $color['dark_gray'] = "555555";
-            $color['blue'] = "5555FF";
-            $color['green'] = "55FF55";
-            $color['aqua'] = "55FFFF";
-            $color['red'] = "FF5555";
-            $color['light_purple'] = "FF55FF";
-            $color['yellow'] = "FFFF55";
-            $color['white'] = "FFFFFF";
-            $color['black'] = "000000";
-            $color['black'] = "000000";
-
-            $query = new MinecraftPing("play.capecraft.net", 25565);
+            $query = new MinecraftPing($args['server'], 25565);
             $query = $query->Query();
-            foreach($query['description']['extra'] as $motd) {
-                
+
+            $background = Image::make('../Public/assets/img/tools/minecraft-server-query.jpg');
+            if(isset($query['favicon'])) {
+                $favicon = Image::make($query['favicon'])->resize(96, 96);
+                $background->insert($favicon, 'top-left', 6, 6);
             }
+
+            //Server Name
+            $background->text($args['server'], 111, 9, function($font) {
+                $font->file('../Public/assets/fonts/1_Minecraft-Regular.otf');
+                $font->size(30);
+                $font->color("#FFFFFF");
+                $font->valign('top');                
+            });
+
+            //Server Players
+            $offset = (strlen($query['players']['max']) - 1) * 18 + 5;
+            $background->text($query['players']['online'], 830 - $offset, 9, function($font) {
+                $font->file('../Public/assets/fonts/1_Minecraft-Regular.otf');
+                $font->size(30);
+                $font->color("#AAAAAA");
+                $font->valign('top');
+                $font->align('right');
+            });
+            
+            //The Slash between the players            
+            $offset = (strlen($query['players']['max']) - 1) * 18 + 2;
+            $background->text("/", 848 - $offset, 9, function($font) {
+                $font->file('../Public/assets/fonts/1_Minecraft-Regular.otf');
+                $font->size(30);
+                $font->color("#555555");
+                $font->valign('top');
+                $font->align('right');
+            });
+            
+            //Server Max Players
+            $background->text($query['players']['max'], 866, 9, function($font) {
+                $font->file('../Public/assets/fonts/1_Minecraft-Regular.otf');
+                $font->size(30);
+                $font->color("#AAAAAA");
+                $font->valign('top');
+                $font->align('right');
+            });
+
+            //Server MOTD
+
+            $motd = MinecraftMessageTranslator::translateMessage($query['description']);
+            $offset = 0;
+            foreach($motd as $msg) {
+                $font = new Font($msg['text']);
+                $font->file('../Public/assets/fonts/1_Minecraft-Regular.otf');
+                $font->size(30);
+                $font->color($msg['color']);
+                $font->valign('top');
+
+                $font->applyToImage($background, 111 + $offset, 42);
+                $offset += $font->getBoxSize()['width'];
+            }
+
+            return $response->write($background->encode('jpg'))->withHeader('Content-Type', 'image/jpg');
         }
     }
