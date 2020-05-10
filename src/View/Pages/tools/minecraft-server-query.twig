@@ -1,0 +1,44 @@
+{% extends "Templates/layout.twig" %}
+{% set title = "Home" %}
+{% block body %}
+<div class="container-fluid" id="content">    
+    <div class="row justify-content-center">        
+        <div class="col-lg-8">
+            <h1>Minecraft Server Query</h1>
+            <p>Will Query a server and get as much information as possible from it</p>
+            <form method="POST">
+                <div class="form-group">
+                    <label>Server IP</label>
+                    <input type="text" name="server" class="form-control" placeholder="play.capecraft.net:25565">
+                    <small class="form-text text-muted">By default this pings on 25565. If you want a different port please specify</small>
+                </div>
+                <button type="submit" class="btn btn-primary">Ping!</button>
+            </form>            
+        </div>
+    </div>
+    <hr>
+    <div class="row justify-content-center">        
+        <div class="col-lg-1">
+            <img src="{{query['favicon']}}" class="img-fluid">
+        </div>
+        <div class="col-lg-7">
+        <table class="table table-borderless">
+            <tbody>
+                <tr>
+                    <th scope="row">MOTD</th>
+                    <td><img class="img-fluid" src="/assets/img/tools/minecraft-server-query.jpg"></td>
+                </tr>            
+                <tr>
+                    <th scope="row">Version</th>
+                    <td><span class="badge badge-primary">{{query['version']['name']}}</span></td>
+                </tr>
+                <tr>
+                    <th scope="row">Players</th>
+                    <td>{{query['players']['online']}}/{{query['players']['max']}}</td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
+    </div>    
+</div>
+{% endblock %}

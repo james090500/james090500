@@ -13,9 +13,6 @@
      * @return Twig               The view
      */
     public static function getHome($request, $response, $args) {
-      $views = self::$db->get('stats', '*')['views'];
-      return self::render($response, 'home', [
-        'views' => $views
-      ]);
+      return self::render($response, 'home');
     }
 }

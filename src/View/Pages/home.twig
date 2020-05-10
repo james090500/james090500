@@ -1,7 +1,20 @@
 {% extends "Templates/layout.twig" %}
 {% set title = "Home" %}
-{% set css = "home.css" %}
 {% block body %}
-<h1>Welcome home</h1>
-<p>The Database value is <strong>{{views}}</strong></p>
+<div class="container-fluid" id="content">
+    <div class="row justify-content-center">
+        <div class="col-lg-6">
+            <h1>James Harrison</h1>
+            <p>Hello, my name is James Harrison. I am a Web Developer, Support Enginner and Problem Solver</p>
+            <ol class="service-list">
+                <li><a target="_blank" class="btn btn-primary" href="https://github.com/james090500"><i class="fab fa-github-alt"></i> GitHub</a></li>
+                <li><a target="_blank" class="btn btn-primary" href="https://discordapp.com/users/231385835054956544"><i class="fab fa-discord"></i> Discord</a></li>
+                <li><a target="_blank" class="btn btn-primary" href="mailto:james@fasttortoise.co.uk"><i class="fas fa-envelope"></i> Email</a></li>
+            </ol>
+        </div>
+        <div class="col-lg-2">
+            <img class="rounded-circle img-fluid" src="/assets/img/me.jpg">
+        </div>
+    </div>
+</div>
 {% endblock %}
