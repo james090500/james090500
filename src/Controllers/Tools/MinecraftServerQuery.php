@@ -2,14 +2,14 @@
 
     Namespace james090500\Controllers\Tools;
 
-    use \james090500\Controllers\Controller;
+    use \james090500\Controllers\IController;
     use \james090500\Utilities\MinecraftMessageTranslator;
     use xPaw\MinecraftPing;
     use xPaw\MinecraftPingException;
     use Intervention\Image\ImageManagerStatic as Image;
     use Intervention\Image\Gd\Font;
 
-    class MinecraftServerQuery extends Controller {
+    class MinecraftServerQuery extends IController {
 
         /**
          * Shows the home page

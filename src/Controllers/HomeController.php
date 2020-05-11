@@ -2,9 +2,9 @@
 
   Namespace james090500\Controllers;
 
-  use james090500\Controllers\Controller;
+  use james090500\Controllers\IController;
 
-  class HomeController extends Controller {
+  class HomeController extends IController {
     /**
      * Shows the home page
      * @param  Request  $request  The request

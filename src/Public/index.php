@@ -2,7 +2,7 @@
 
   Namespace james090500;
 
-  use \james090500\Controllers\Controller;
+  use \james090500\Controllers\IController;
   use \james090500\System\Settings;
   use \james090500\Routes\WebRoutes;
   use \james090500\System\Database;
@@ -102,7 +102,7 @@
       }
 
       //Start an instance of controller and routing
-      Controller::createInstance($app);
+      IController::createInstance($app);
       WebRoutes::start($app);
 
       //Start the app
