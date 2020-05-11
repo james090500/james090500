@@ -124,19 +124,23 @@
             $offset = 0;
             $yPos = 55;
             foreach($motd as $msg) {
-                $font = new Font($msg['text']);
+                $font = new Font(str_replace("\n", "", $msg['text']));
                 $font->file(MinecraftMessageTranslator::getFont($msg));
-                $font->size(31);
+                $font->size(30);
                 $font->color($msg['color']);
                 $font->valign('middle');
 
                 $font->applyToImage($background, 100 + $offset, $yPos);
                 $offset += $font->getBoxSize()['width'];
 
+                if(isset($msg['special'])) {
+                    error_log($msg['text'] . " " . $offset . " " . $yPos);
+                }
+
                 if(strpos($msg['text'], "\n") !== false) {
                     $yPos = 85;
                     $offset = new Font(substr($msg['text'], strpos($msg['text'], "\n")));
-                    $offset = $offset->file(MinecraftMessageTranslator::getFont($msg))->size(31)->getBoxSize()['width'];
+                    $offset = $offset->file(MinecraftMessageTranslator::getFont($msg))->size(30)->getBoxSize()['width'];
                 }
             }
 

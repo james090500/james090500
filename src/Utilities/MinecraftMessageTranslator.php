@@ -9,7 +9,11 @@
             } else {
                 foreach($motd['extra'] as $key => $message) {
                     $motd['extra'][$key]['color'] = (!isset($message['color'])) ? self::getColorByName("gray") : self::getColorByName($message['color']);
+                    if(preg_match('/([^\x00-\x7F]+)/u', $message['text'])) {
+                        $motd['extra'][$key]['special'] = true;
+                    }        
                 }
+
                 return $motd['extra'];
             }
         }
@@ -17,7 +21,7 @@
         public static function translateMessage($message) {
             $translatedMessage = array();
             
-            $messages = preg_split('/(\n|[\xA7][a-zA-Z0-9])/u', $message, -1, PREG_SPLIT_DELIM_CAPTURE | PREG_SPLIT_NO_EMPTY);
+            $messages = preg_split('/(\n|[\xA7][a-zA-Z0-9]|[^\x00-\x7F]+)/u', $message, -1, PREG_SPLIT_DELIM_CAPTURE | PREG_SPLIT_NO_EMPTY);
 
             $color = self::getColorByName("black");
             $format = [];
@@ -30,20 +34,20 @@
 
                     $format = self::getFormat($msg);
                 } else {
-                    $textColor = [
+                    $textSection = [
                         'color' => $color,
                         'text' => $msg
-                    ];        
+                    ];
+
+                    if(preg_match('/([^\x00-\x7F]+)/u', $msg)) {
+                        $textSection['special'] = true;
+                    }        
                     
-                    $translatedMessage[] = array_merge($textColor, $format);
+                    $translatedMessage[] = array_merge($textSection, $format);
                 }
             }
 
             return $translatedMessage;
-        }
-
-        private static function getText($msg) {
-            return $msg;
         }
 
         private static function getColorByCode($colorCode) {
@@ -129,7 +133,9 @@
         }
 
         public static function getFont($message) {
-            if(isset($message['bold']) && isset($message['italic'])) {
+            if(isset($message['special'])) {
+                return '../Public/assets/fonts/unifont.ttf';
+            } else if(isset($message['bold']) && isset($message['italic'])) {
                 return '../Public/assets/fonts/4_Minecraft-BoldItalic.otf';
             } else if(isset($message['bold'])) {
                 return '../Public/assets/fonts/3_Minecraft-Bold.otf';
