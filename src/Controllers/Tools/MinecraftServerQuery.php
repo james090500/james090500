@@ -43,13 +43,25 @@
                 $port = isset($args['port']) ? $args['port'] : 25565;
             }
 
-            $query = new MinecraftPing($server, $port);
+            try {
+                $query = new MinecraftPing($server, $port);
+                $serverQuery = $query->Query();
+                $query->Close();
+                
+                if(!isset($serverQuery['favicon'])) {
+                    $serverQuery['favicon'] = "/assets/img/tools/pack.png";
+                }
 
-            return self::render($response, 'tools/minecraft-server-query', [
-                'server' => $server,
-                'port' => $port,
-                'query' => $query->Query()
-            ]);
+                return self::render($response, 'tools/minecraft-server-query', [
+                    'server' => $server,
+                    'port' => $port,
+                    'query' => $serverQuery
+                ]);
+            } catch(MinecraftPingException $e) {
+                return self::render($response, 'tools/minecraft-server-query', [
+                    'error' => true
+                ]);
+            }
         }
         
         /**
@@ -110,19 +122,19 @@
 
             $motd = MinecraftMessageTranslator::translateMotd($query['description']);
             $offset = 0;
-            $yPos = 42;
+            $yPos = 55;
             foreach($motd as $msg) {
                 $font = new Font($msg['text']);
                 $font->file(MinecraftMessageTranslator::getFont($msg));
                 $font->size(31);
                 $font->color($msg['color']);
-                $font->valign('top');
+                $font->valign('middle');
 
                 $font->applyToImage($background, 100 + $offset, $yPos);
                 $offset += $font->getBoxSize()['width'];
 
                 if(strpos($msg['text'], "\n") !== false) {
-                    $yPos = 72;
+                    $yPos = 85;
                     $offset = new Font(substr($msg['text'], strpos($msg['text'], "\n")));
                     $offset = $offset->file(MinecraftMessageTranslator::getFont($msg))->size(31)->getBoxSize()['width'];
                 }

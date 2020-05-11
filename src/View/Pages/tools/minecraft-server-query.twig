@@ -5,15 +5,22 @@
     <div class="row justify-content-center">        
         <div class="col-lg-8">
             <h1>Minecraft Server Query</h1>
-            <p>Will Query a server and get as much information as possible from it</p>
+            <p>Will Query a server and get as much information as possible from it. All requests are uncached so it may take some time to get your result. Please do not abuse this service</p>
             <form method="POST" action="/tools/minecraft-server-query">
                 <div class="form-group">
                     <label>Server IP</label>
                     <input type="text" name="server" id="server" class="form-control" placeholder="play.capecraft.net:25565">
-                    <small class="form-text text-muted">By default this pings on 25565. If you want a different port please specify</small>
+                    <small class="form-text text-muted">By default this pings on 25565, for bedrock use 19132. If you want a different port please specify</small>
                 </div>
                 <button type="submit" class="btn btn-primary">Ping!</button>
-            </form>            
+            </form>
+            {% if error %}
+            <hr>
+            <div class="alert alert-danger">
+                <strong>Could not connect to server</strong>
+                <p>Please double check the IP and Port</p>
+            </div>
+            {% endif %}
         </div>
     </div>
     {% if query %}
