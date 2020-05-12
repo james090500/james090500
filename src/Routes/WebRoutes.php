@@ -3,6 +3,7 @@
 
   use \james090500\Controllers\HomeController;
   use \james090500\Controllers\Tools\MinecraftServerQuery;
+  use \james090500\Controllers\Tools\MinecraftChunkCalculator;
 
   class WebRoutes {
 
@@ -15,6 +16,8 @@
         $app->post('/minecraft-server-query', [ MinecraftServerQuery::class, 'getServer']);
         $app->get('/minecraft-server-query/{server}[/{port}]', [ MinecraftServerQuery::class, 'getServer']);
         $app->get('/minecraft-server-query/{server}/{port}/motd', [ MinecraftServerQuery::class, 'getServerMotd']);
+        
+        $app->get('/minecraft-chunk-calculator', [ MinecraftChunkCalculator::class, 'getHome']);
       });
     }
   }

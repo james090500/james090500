@@ -4,8 +4,8 @@
     class MinecraftMessageTranslator {
 
         public static function translateMotd($motd) {
-            if(!is_array($motd)) {
-                return self::translateMessage($motd);
+            if(!isset($motd['extra'])) {
+                return (isset($motd['text'])) ? self::translateMessage($motd['text']) : self::translateMessage($motd);
             } else {
                 foreach($motd['extra'] as $key => $message) {
                     $motd['extra'][$key]['color'] = (!isset($message['color'])) ? self::getColorByName("gray") : self::getColorByName($message['color']);

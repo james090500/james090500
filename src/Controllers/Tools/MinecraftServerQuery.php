@@ -76,10 +76,9 @@
             $query = $query->Query();
 
             $background = Image::make('../Public/assets/img/tools/minecraft-server-query.jpg');
-            if(isset($query['favicon'])) {
-                $favicon = Image::make($query['favicon'])->resize(96, 96);
-                $background->insert($favicon, 'top-left', 6, 6);
-            }
+            $favicon = isset($query['favicon']) ? Image::make($query['favicon']) : Image::make('../Public/assets/img/tools/pack.png');            
+            $favicon->resize(96, 96);
+            $background->insert($favicon, 'top-left', 6, 6);
 
             //Server Name
             $background->text($args['server'], 111, 9, function($font) {
