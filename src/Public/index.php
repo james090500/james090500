@@ -79,6 +79,7 @@
       //Set view in Container
       $container->set('view', function() {
           return new Twig('../View', [
+            'displayErrorDetails' => getenv('DEV_MODE'),
             'debug' => getenv('DEV_MODE'),
             'cache' => '../View/Cache'
           ]);

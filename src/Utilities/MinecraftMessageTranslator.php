@@ -23,7 +23,7 @@
             
             $messages = preg_split('/(\n|[\xA7][a-zA-Z0-9]|[^\x00-\x7F]+)/u', $message, -1, PREG_SPLIT_DELIM_CAPTURE | PREG_SPLIT_NO_EMPTY);
 
-            $color = self::getColorByName("black");
+            $color = self::getColorByName("gray");
             $format = [];
             foreach($messages as $msg) {                
                 if(strpos($msg, "§") !== false) {

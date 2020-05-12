@@ -6,6 +6,8 @@
     use \james090500\Utilities\MinecraftMessageTranslator;
     use xPaw\MinecraftPing;
     use xPaw\MinecraftPingException;
+    use xPaw\MinecraftQuery;
+	use xPaw\MinecraftQueryException;
     use Intervention\Image\ImageManagerStatic as Image;
     use Intervention\Image\Gd\Font;
 
@@ -43,11 +45,8 @@
                 $port = isset($args['port']) ? $args['port'] : 25565;
             }
 
-            try {
-                $query = new MinecraftPing($server, $port);
-                $serverQuery = $query->Query();
-                $query->Close();
-                
+            $serverQuery = self::contactServer($server, $port);            
+            if($serverQuery != null) {
                 if(!isset($serverQuery['favicon'])) {
                     $serverQuery['favicon'] = "/assets/img/tools/pack.png";
                 }
@@ -57,9 +56,11 @@
                     'port' => $port,
                     'query' => $serverQuery
                 ]);
-            } catch(MinecraftPingException $e) {
+            } else {
                 return self::render($response, 'tools/minecraft-server-query', [
-                    'error' => true
+                    'error' => true,
+                    'server' => $server,
+                    'port' => $port
                 ]);
             }
         }
@@ -72,8 +73,10 @@
          * @return Twig               The view
          */
         public static function getServerMotd($request, $response, $args) {
-            $query = new MinecraftPing($args['server'], 25565);
-            $query = $query->Query();
+            $query = self::contactServer($args['server'], $args['port']);
+            if($query == null) {
+                return $response->write(0)->withHeader('Content-Type', 'image/jpg');
+            }
 
             $background = Image::make('../Public/assets/img/tools/minecraft-server-query.jpg');
             $favicon = isset($query['favicon']) ? Image::make($query['favicon']) : Image::make('../Public/assets/img/tools/pack.png');            
@@ -125,24 +128,54 @@
             foreach($motd as $msg) {
                 $font = new Font(str_replace("\n", "", $msg['text']));
                 $font->file(MinecraftMessageTranslator::getFont($msg));
-                $font->size(30);
+                $font->size(29);
                 $font->color($msg['color']);
                 $font->valign('middle');
 
-                $font->applyToImage($background, 100 + $offset, $yPos);
+                $font->applyToImage($background, 111 + $offset, $yPos);
                 $offset += $font->getBoxSize()['width'];
 
-                if(isset($msg['special'])) {
-                    error_log($msg['text'] . " " . $offset . " " . $yPos);
-                }
-
-                if(strpos($msg['text'], "\n") !== false) {
+                if(strpos($msg['text'], "\n") !== false || $offset >= 945) {
                     $yPos = 85;
                     $offset = new Font(substr($msg['text'], strpos($msg['text'], "\n")));
-                    $offset = $offset->file(MinecraftMessageTranslator::getFont($msg))->size(30)->getBoxSize()['width'];
+                    $offset = $offset->file(MinecraftMessageTranslator::getFont($msg))->size(29)->getBoxSize()['width'];
                 }
             }
 
             return $response->write($background->encode('jpg'))->withHeader('Content-Type', 'image/jpg');
+        }
+
+        /**
+         * 
+         * 
+         */
+        private static function contactServer($server, $port) {
+            try {
+                $query = new MinecraftPing($server, $port);
+                $serverQuery = $query->Query();
+                $query->Close();                
+
+                return $serverQuery;               
+            } catch(MinecraftPingException $e) {
+                try {
+                    $query = new MinecraftQuery();
+                    $query->Connect($server, $port);
+
+                    $serverQuery = [                        
+                        'version' => [
+                            'name' => $query->getInfo()['Version']
+                        ],
+                        'players' => [
+                            'online' => $query->getInfo()['Players'],
+                            'max' => $query->getInfo()['MaxPlayers']
+                        ],
+                        'description' => $query->getInfo()['HostName']
+                    ];
+
+                    return $serverQuery;
+                } catch(MinecraftQueryException $e) {
+                    return null;
+                }
+            }
         }
     }
