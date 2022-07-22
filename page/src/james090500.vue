@@ -1,17 +1,23 @@
 <template>
     <main>
-        <router-view v-slot="{ Component }">
+        <!-- <router-view v-slot="{ Component }">
             <transition name="fade" mode="out-in">
                 <component :is="Component" />
             </transition>
-        </router-view>
+        </router-view> -->
+        <HomeView/>
+        <MyWorkView/>
     </main>
 </template>
 
 <script>
-// import MainMenu from '@/views/partials/MainMenu.vue'
-// import MainFooter from '@/views/partials/MainFooter.vue'
+    import HomeView from '@/views/HomeView.vue'
+    import MyWorkView from '@/views/MyWorkView.vue'
 
-export default {
-}
+    export default {
+        components: {
+            HomeView,
+            MyWorkView
+        }
+    }
 </script>

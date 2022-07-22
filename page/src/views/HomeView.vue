@@ -1,6 +1,9 @@
 <template>
-    <section class="bg-very-dark">
-        <div class="header z-10 shadow-lg rounded">
+    <div>
+        <div class="header-split">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#111417" fill-opacity="1" d="M0,64L60,80C120,96,240,128,360,122.7C480,117,600,75,720,69.3C840,64,960,96,1080,96C1200,96,1320,64,1380,48L1440,32L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg>
+        </div>
+        <section class="header">
             <div class="row justify-content-center">
                 <div class="col-md-6 name">
                     <h1>Hi, I'm James Harrison</h1>
@@ -19,32 +22,27 @@
                     <img class="w-full img-fluid" src="/img/half-james.png"/>
                 </div>
             </div>
-        </div>
-        <Particles id="background-particles" url="/particlesjs-config.json" :particlesInit="particlesInit" :particlesLoaded="particlesLoaded"/>
-    </section>
+        </section>
+    </div>
 </template>
 
 <style lang="scss">
-    section {
-        background: linear-gradient(45deg, #7F0012 5%, #1B0A07 86%);
-        height: 100vh;
+    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+    .header-split > svg {
+        position: absolute;
+        bottom: 0;
     }
 
-    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
     .header {
-        background: #0e0e0e;
-        top: 50%;
-        transform: translateY(-50%);
-        position: absolute;
-        right: 0;
-        left: 0;
-        margin: 0 auto;
-        height: 75vh;
-        width: 75vw;
+        z-index: 0;
+        height: 100vh;
+        background: #004c82;
 
         & > .row {
             height: 100%;
         }
+
     }
 
     .name {
@@ -93,25 +91,4 @@
         position: absolute;
         bottom: 0;
     }
-
-    #home-particles {
-        width: 100vw;
-        height: 100vh;
-        overflow: hidden;
-    }
 </style>
-
-<script>
-    import { loadFull } from "tsparticles";
-
-    export default {
-        methods: {
-            particlesInit: async (engine) => {
-                await loadFull(engine);
-            },
-            particlesLoaded: async (container) => {
-                console.log("Particles container loaded", container);
-            }
-        }
-    }
-</script>
