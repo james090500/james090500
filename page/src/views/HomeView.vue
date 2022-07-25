@@ -7,19 +7,18 @@
             <div class="row justify-content-center">
                 <div class="col-md-6 name">
                     <h1>Hi, I'm James Harrison</h1>
-                    <h1>Web Developer*</h1>
-                    <small>* but not a graphic designer</small>
+                    <h1>Web Developer</h1>
                     <div class="row mt-20">
                         <div class="col-4 text-right">
-                            <router-link class="btn btn-primary btn-hire-me" to="/hire">Hire Me</router-link>
+                            <a class="btn btn-primary btn-hire-me" href="#hire-me">Hire Me</a>
                         </div>
                         <div class="col-3 ml-10">
-                            <router-link class="btn btn-primary btn-my-work" to="/work">My Work</router-link>
+                            <a class="btn btn-primary btn-my-work" href="#my-work">My Work</a>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4 image">
-                    <img class="w-full img-fluid" src="/img/half-james.png"/>
+                    <img class="w-three-quarter img-fluid border shadow rounded" src="/img/james-header.jpg"/>
                 </div>
             </div>
         </section>
@@ -45,8 +44,12 @@
 
     }
 
+    .image {
+        padding-top: 12vh;
+    }
+
     .name {
-        padding-top: 25vh;
+        padding-top: 20vh;
 
         & > h1 {
             font-family: 'Bebas Neue', cursive;
@@ -85,10 +88,5 @@
                 background-position: top left;
             }
         }
-    }
-
-    .image > img {
-        position: absolute;
-        bottom: 0;
     }
 </style>

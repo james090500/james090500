@@ -1,14 +1,15 @@
 <template>
     <main>
-        <!-- <router-view v-slot="{ Component }">
-            <transition name="fade" mode="out-in">
-                <component :is="Component" />
-            </transition>
-        </router-view> -->
-        <HomeView/>
-        <MyWorkView/>
+        <HomeView id="home"/>
+        <MyWorkView id="my-work"/>
     </main>
 </template>
+
+<style>
+    .content-wrapper {
+        scroll-behavior: smooth;
+    }
+</style>
 
 <script>
     import HomeView from '@/views/HomeView.vue'
