@@ -21,6 +21,10 @@
         }
     }
 
+    .content-title {
+        font-family: inherit !important;
+    }
+
     .card-image {
         background-position: center;
         background-size: cover;
