@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="header-split">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#111417" fill-opacity="1" d="M0,64L60,80C120,96,240,128,360,122.7C480,117,600,75,720,69.3C840,64,960,96,1080,96C1200,96,1320,64,1380,48L1440,32L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg>
+            <img src="/svg/home-split.svg"/>
         </div>
         <section class="header">
             <div class="row justify-content-center">
@@ -18,7 +18,7 @@
                     </div>
                 </div>
                 <div class="col-md-4 image">
-                    <img class="w-three-quarter img-fluid border shadow rounded" src="/img/james-header.jpg"/>
+                    <img class="w-three-quarter img-fluid border shadow-lg rounded" src="/img/james-header.jpg"/>
                 </div>
             </div>
         </section>
@@ -26,9 +26,7 @@
 </template>
 
 <style lang="scss">
-    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-
-    .header-split > svg {
+    .header-split > img {
         position: absolute;
         bottom: 0;
     }
@@ -46,13 +44,18 @@
 
     .image {
         padding-top: 12vh;
+        overflow: hidden;
+
+        & > img {
+            animation: 1s ease-out 0s 1 slideInRight;
+        }
     }
 
     .name {
         padding-top: 20vh;
 
         & > h1 {
-            font-family: 'Bebas Neue', cursive;
+            animation: 1s ease-out 0s 1 slideInUp;
             font-size: 8rem;
         }
 
