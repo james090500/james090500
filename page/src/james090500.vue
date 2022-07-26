@@ -2,6 +2,7 @@
     <main>
         <HomeView id="home"/>
         <MyWorkView id="my-work"/>
+        <ExperienceView/>
     </main>
 </template>
 
@@ -53,11 +54,13 @@
 <script>
     import HomeView from '@/views/HomeView.vue'
     import MyWorkView from '@/views/MyWorkView.vue'
+    import ExperienceView from '@/views/ExperienceView.vue'
 
     export default {
         components: {
             HomeView,
-            MyWorkView
+            MyWorkView,
+            ExperienceView
         }
     }
 </script>

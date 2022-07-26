@@ -1,7 +1,7 @@
 <template>
     <section class="bg-very-dark">
         <div class="row justify-content-center">
-            <div class="col-8 text-center">
+            <div class="col-10 text-center">
                 <h1>My Work</h1>
                 <div class="row">
                     <div class="col">
@@ -30,9 +30,9 @@
                     </div>
                 </div>
                 <div class="github-stats">
-                    <h1>With various Open Source contribution on GitHub</h1>
+                    <h1>With various Open Source contributions on GitHub</h1>
                     <a href="https://github.com/james090500" target="_blank">
-                        <img class="w-half" src="https://github-readme-stats.vercel.app/api?username=james090500&count_private=true&show_icons=true&theme=algolia&hide_border=true"/>
+                        <img class="w-full w-md-half" src="https://github-readme-stats.vercel.app/api?username=james090500&count_private=true&show_icons=true&theme=algolia&hide_border=true"/>
                     </a>
                 </div>
             </div>
@@ -46,11 +46,24 @@
     }
 
     .github-stats {
-        padding: 10rem;
+        height: 95vh;
+        padding: 5rem;
         background-image: url("/svg/github-blob.svg");
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
+    }
+
+    @media(max-width: 768px) {
+        h1 {
+            font-size: 4rem;
+        }
+
+        .github-stats {
+            padding: 0 !important;
+            background-position: top;
+            height: auto;
+        }
     }
 </style>
 
