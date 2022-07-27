@@ -17,8 +17,5 @@ import { FontAwesomeIcon, FontAwesomeLayers } from './fontawesome'
 app.component('FontAwesomeIcon', FontAwesomeIcon);
 app.component('FontAwesomeLayers', FontAwesomeLayers);
 
-import Particles from 'particles.vue3'
-app.use(Particles)
-
 // Mount the app
 app.mount("#app");

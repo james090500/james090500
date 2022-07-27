@@ -9,7 +9,7 @@
                             image="https://minecraftcapes.net/images/capes-meta.jpg"
                             title="MinecraftCapes"
                             description="A Minecraft Mod to allow users to wear any cape in game, cost free, also allows all users to see other users capes. With around 1,500,000 users and 200,000,000 API requests a month this is my biggest project."
-                            href="https://minecraftcapes.net"
+                            url="https://minecraftcapes.net"
                         />
                     </div>
                     <div class="col">
@@ -17,7 +17,7 @@
                             image="https://capecraft.net/images/banner.jpg"
                             title="CapeCraft"
                             description="A SMP Minecraft server with around 30-50 concurrent players and a voluntary staff team consisting of 10 people. With a custom plugins and website hosted on a dedicated debian server in Germany."
-                            href="https://capecraft.net"
+                            url="https://capecraft.net"
                         />
                     </div>
                     <div class="col">
@@ -25,7 +25,7 @@
                             image="https://mojangstat.us/assets/meta.jpg"
                             title="MojangStatus"
                             description="A status page for Mojang and Minecraft APIs. Written using Vue3 hosted on CloudFlare Pages and a JavaScript API using CloudFlare Workers"
-                            href="https://mojangstat.us"
+                            url="https://mojangstat.us"
                         />
                     </div>
                 </div>

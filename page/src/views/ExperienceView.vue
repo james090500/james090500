@@ -49,7 +49,7 @@
         padding-top: 20vh;
         min-height: 110vh;
         width: 100%;
-        background-image: url('/svg/experience.svg');
+        background-image: url('/img/experience.jpg');
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
