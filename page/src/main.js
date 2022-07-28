@@ -17,5 +17,9 @@ import { FontAwesomeIcon, FontAwesomeLayers } from './fontawesome'
 app.component('FontAwesomeIcon', FontAwesomeIcon);
 app.component('FontAwesomeLayers', FontAwesomeLayers);
 
+// Axios
+import axios from 'axios'
+app.config.globalProperties.axios = axios;
+
 // Mount the app
 app.mount("#app");

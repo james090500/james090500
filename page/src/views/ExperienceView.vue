@@ -26,6 +26,11 @@
                     </p>
                 </div>
             </div>
+            <div class="row">
+                <div class="col-4 bg-dark">
+                    <CloudflareAnalyticsComponent/>
+                </div>
+            </div>
         </div>
     </section>
 </template>
@@ -55,3 +60,13 @@
         background-repeat: no-repeat;
     }
 </style>
+
+<script>
+    import CloudflareAnalyticsComponent from '@/partials/CloudflareAnalyticsComponent.vue'
+
+    export default {
+        components: {
+            CloudflareAnalyticsComponent
+        }
+    }
+</script>
