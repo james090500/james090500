@@ -9,16 +9,23 @@ import {
  */
 export default {
     async getMCCAnalytics() {
+        let date = new Date();
+        let now = date.toISOString();
+        date.setDate(date.getDate() - 1);
+        let past = date.toISOString();
+
         const query = { query: `
-        {
+          {
             viewer {
               zones(filter: {zoneTag: "${CF_ZONE}"}) {
-                httpRequests1dGroups(orderBy: [date_ASC], limit: 1000, filter: {date_gt: "2022-06-28"}) {
+                httpRequests1hGroups(orderBy: [datetime_ASC], limit: 1000, filter: {datetime_lt: "${now}", datetime_gt: "${past}"}) {
                   date: dimensions {
-                    date
+                    datetime
                   }
                   sum {
-                    cachedBytes
+                    cachedRequests
+                    requests,
+                    cachedBytes,
                     bytes
                   }
                 }

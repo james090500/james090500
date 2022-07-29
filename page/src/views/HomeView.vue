@@ -6,10 +6,10 @@
                 <h1>Web Developer</h1>
                 <div class="row mt-20">
                     <div class="col-4 mr-10 text-right">
-                        <a class="btn btn-primary btn-my-work" href="#my-work">My Work</a>
+                        <a class="btn btn-my-work" href="#my-work">My Work</a>
                     </div>
                     <div class="col-6">
-                        <a class="btn btn-primary btn-experience" href="#my-experience">My Experience</a>
+                        <a class="btn btn-experience" href="#my-experience">My Experience</a>
                     </div>
                 </div>
             </div>
@@ -77,11 +77,6 @@
             margin-bottom: 0;
             padding-bottom: 0;
             line-height: 5rem;
-        }
-
-        & .btn {
-            border: none !important;
-            padding: 0 3rem !important;
         }
 
         .btn-experience {

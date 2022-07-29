@@ -49,6 +49,11 @@
             transform: translateY(0);
         }
     }
+
+    .btn {
+        border: none !important;
+        padding: 0 3rem !important;
+    }
 </style>
 
 <script>
