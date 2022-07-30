@@ -1,8 +1,8 @@
 <template>
     <section>
-        <div class="experience-start"></div>
+        <div  id="my-experience" class="experience-start"></div>
         <div class="experience">
-            <h1 class="text-center mb-0" id="my-experience">My Experience</h1>
+            <h1 class="text-center mb-0">My Experience</h1>
             <p class="text-center mt-0">PHP, SQL, VueJS, HTML, CSS, JavaScript, Java, PowerShell, NodeJS</p>
             <div class="row justify-content-center pt-10">
                 <div class="col-md-2 p-20 p-md-0">
@@ -34,13 +34,15 @@
         <div class="cloudflare">
             <h1 class="text-center mb-0" id="large-data">Large Data Handling</h1>
             <p class="text-center mt-0">A Review on a High Performance and High Usage API</p>
-            <div class="row justify-content-center pt-10">
+            <div class="row justify-content-center">
                 <div class="col-md-4">
                     <CloudflareAnalyticsComponent class="rounded bg-dark shadow-lg"/>
                 </div>
-                <div class="col-md-4 offset-md-1 bg-dark p-20 shadow rounded">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi a eros a lorem rutrum porttitor. Vestibulum ut quam ut metus placerat condimentum ut eu lorem. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec porta lorem et mollis bibendum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer tempus vitae felis id facilisis. Sed lacinia magna eu dignissim consectetur. Donec dignissim auctor diam, nec imperdiet eros convallis at. Vestibulum tincidunt, odio sed dignissim luctus, nulla tortor aliquam urna, eu accumsan erat tellus eget velit. Donec ultricies felis justo, pharetra ultricies urna ultrices a. Duis id tempus lectus. Cras velit nibh, gravida sit amet ornare non, tristique id ligula. Vivamus a dolor leo. Sed massa eros, vulputate eget odio at, lobortis congue orci. Proin gravida magna id dignissim convallis. Sed placerat tincidunt neque.</p>
-                    <p>Pellentesque tempus risus quis nisi auctor pulvinar ut sodales enim. Aenean placerat nisl sed varius scelerisque. Aenean pellentesque semper congue. Vestibulum molestie, arcu at commodo sagittis, orci nunc blandit neque, non aliquet metus nisi at tortor. Aenean sed odio laoreet, blandit enim at, feugiat tortor. Aenean in faucibus tellus, at accumsan odio. Curabitur eu consequat dolor. Pellentesque at erat a ante euismod ullamcorper. Fusce ex metus, pulvinar at tristique ut, placerat vitae lectus. Fusce tempor sem ac pharetra mollis. Suspendisse elementum mattis consequat. Nulla hendrerit gravida velit, sit amet venenatis dolor.</p>
+                <div class="col-md-4 offset-md-1 shadow rounded frosted px-20">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque facilis modi optio, eius animi saepe in quisquam laborum ducimus sequi natus eveniet voluptates dignissimos nulla dolorem, nihil iure! Ratione, pariatur.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque facilis modi optio, eius animi saepe in quisquam laborum ducimus sequi natus eveniet voluptates dignissimos nulla dolorem, nihil iure! Ratione, pariatur.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque facilis modi optio, eius animi saepe in quisquam laborum ducimus sequi natus eveniet voluptates dignissimos nulla dolorem, nihil iure! Ratione, pariatur.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque facilis modi optio, eius animi saepe in quisquam laborum ducimus sequi natus eveniet voluptates dignissimos nulla dolorem, nihil iure! Ratione, pariatur.</p>
                 </div>
             </div>
         </div>
@@ -49,6 +51,7 @@
 
 <style scoped lang="scss">
     h1 {
+        line-height: 5rem;
         font-size: 7rem;
     }
 
@@ -64,6 +67,7 @@
 
     .experience {
         padding-top: 20vh;
+        padding-bottom: 5vh;
         min-height: 110vh;
         width: 100%;
         background-image: url('/img/experience.jpg');
@@ -73,7 +77,7 @@
     }
 
     .cloudflare {
-        padding-top: 5vh;
+        padding: 5vh 0;
         min-height: 100vh;
         width: 100%;
         background-image: url('/svg/cf-graph.svg');
@@ -90,6 +94,29 @@
         &:hover {
             background-position: right center;
         }
+    }
+
+    .frosted:before {
+        content: "";
+        position: absolute;
+        background: inherit;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        box-shadow: inset 0 0 2000px #0e0e0e;
+        filter: blur(50px);
+        margin: -20px;
+    }
+
+    .frosted {
+        box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);
+        border-radius: 5px;
+        position: relative;
+        z-index: 1;
+        background: inherit;
+        overflow: hidden;
     }
 </style>
 
