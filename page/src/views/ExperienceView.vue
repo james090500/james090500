@@ -34,11 +34,13 @@
         <div class="cloudflare">
             <h1 class="text-center mb-0" id="large-data">Large Data Handling</h1>
             <p class="text-center mt-0">A Review on a High Performance and High Usage API</p>
-            <div class="row justify-content-center">
-                <div class="col-md-4">
-                    <CloudflareAnalyticsComponent class="rounded bg-dark shadow-lg"/>
+            <div class="pt-20 row justify-content-center">
+                <div class="col-md-5">
+                    <CloudflareAnalyticsComponent class="h-full rounded bg-dark shadow-lg"/>
                 </div>
-                <div class="col-md-4 offset-md-1 shadow rounded frosted px-20">
+                <div class="col-md-4 offset-md-1 shadow rounded px-20">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque facilis modi optio, eius animi saepe in quisquam laborum ducimus sequi natus eveniet voluptates dignissimos nulla dolorem, nihil iure! Ratione, pariatur.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque facilis modi optio, eius animi saepe in quisquam laborum ducimus sequi natus eveniet voluptates dignissimos nulla dolorem, nihil iure! Ratione, pariatur.</p>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque facilis modi optio, eius animi saepe in quisquam laborum ducimus sequi natus eveniet voluptates dignissimos nulla dolorem, nihil iure! Ratione, pariatur.</p>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque facilis modi optio, eius animi saepe in quisquam laborum ducimus sequi natus eveniet voluptates dignissimos nulla dolorem, nihil iure! Ratione, pariatur.</p>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque facilis modi optio, eius animi saepe in quisquam laborum ducimus sequi natus eveniet voluptates dignissimos nulla dolorem, nihil iure! Ratione, pariatur.</p>

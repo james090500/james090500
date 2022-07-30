@@ -21,6 +21,7 @@
                 chartData: {},
                 chartOptions: {
                     responsive: true,
+                    maintainAspectRatio: false,
                     scales: {
                         y: {
                             display: true,

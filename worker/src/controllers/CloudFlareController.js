@@ -9,10 +9,8 @@ import {
  */
 export default {
     async getMCCAnalytics() {
-        let date = new Date();
-        let now = date.toISOString();
-        date.setDate(date.getDate() - 1);
-        let past = date.toISOString();
+        let now = new Date().toISOString();
+        let past = new Date(Date.now() - (86400 * 1000)).toISOString();
 
         const query = { query: `
           {
