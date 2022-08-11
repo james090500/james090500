@@ -3,6 +3,8 @@
         <HomeView id="home"/>
         <MyWorkView id="my-work"/>
         <ExperienceView/>
+        <LargeData/>
+        <MyAwards/>
     </main>
 </template>
 
@@ -60,12 +62,16 @@
     import HomeView from '@/views/HomeView.vue'
     import MyWorkView from '@/views/MyWorkView.vue'
     import ExperienceView from '@/views/ExperienceView.vue'
+    import LargeData from '@/views/LargeData.vue'
+    import MyAwards from '@/views/MyAwards.vue'
 
     export default {
         components: {
             HomeView,
             MyWorkView,
-            ExperienceView
+            ExperienceView,
+            LargeData,
+            MyAwards
         }
     }
 </script>

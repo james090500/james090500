@@ -1,7 +1,7 @@
 <template>
     <section>
-        <div  id="my-experience" class="experience-start"></div>
-        <div class="experience">
+        <div class="experience-start"></div>
+        <div class="experience" id="my-experience">
             <h1 class="text-center mb-0">My Experience</h1>
             <p class="text-center mt-0">PHP, SQL, VueJS, HTML, CSS, JavaScript, Java, PowerShell, NodeJS</p>
             <div class="row justify-content-center pt-10">
@@ -27,24 +27,7 @@
                     <p>
                         <strong>Read more on my experience handling large amounts of API Requests</strong>
                     </p>
-                    <a class="btn btn-primary btn-large-data" href="#large-data">My Work</a>
-                </div>
-            </div>
-        </div>
-        <div class="cloudflare">
-            <h1 class="text-center mb-0" id="large-data">Large Data Handling</h1>
-            <p class="text-center mt-0">A Review on a High Performance and High Usage API</p>
-            <div class="pt-20 row justify-content-center">
-                <div class="col-md-5">
-                    <CloudflareAnalyticsComponent class="h-full rounded bg-dark shadow-lg"/>
-                </div>
-                <div class="col-md-4 offset-md-1 shadow rounded px-20">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque facilis modi optio, eius animi saepe in quisquam laborum ducimus sequi natus eveniet voluptates dignissimos nulla dolorem, nihil iure! Ratione, pariatur.</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque facilis modi optio, eius animi saepe in quisquam laborum ducimus sequi natus eveniet voluptates dignissimos nulla dolorem, nihil iure! Ratione, pariatur.</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque facilis modi optio, eius animi saepe in quisquam laborum ducimus sequi natus eveniet voluptates dignissimos nulla dolorem, nihil iure! Ratione, pariatur.</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque facilis modi optio, eius animi saepe in quisquam laborum ducimus sequi natus eveniet voluptates dignissimos nulla dolorem, nihil iure! Ratione, pariatur.</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque facilis modi optio, eius animi saepe in quisquam laborum ducimus sequi natus eveniet voluptates dignissimos nulla dolorem, nihil iure! Ratione, pariatur.</p>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque facilis modi optio, eius animi saepe in quisquam laborum ducimus sequi natus eveniet voluptates dignissimos nulla dolorem, nihil iure! Ratione, pariatur.</p>
+                    <a class="btn btn-primary btn-large-data" href="#large-data">Read More</a>
                 </div>
             </div>
         </div>
@@ -57,35 +40,24 @@
         font-size: 7rem;
     }
 
-    .experience-start {
-        position: absolute;
+    .experience-start, .experience {
         height: 100vh;
         width: 100%;
-        background-image: url('/svg/experience-start.svg');
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
+    }
+
+    .experience-start {
+        position: absolute;
+        background-image: url('/svg/experience-start.svg');
     }
 
     .experience {
         padding-top: 20vh;
         padding-bottom: 5vh;
         min-height: 110vh;
-        width: 100%;
         background-image: url('/img/experience.jpg');
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
-    }
-
-    .cloudflare {
-        padding: 5vh 0;
-        min-height: 100vh;
-        width: 100%;
-        background-image: url('/svg/cf-graph.svg');
-        background-position: center;
-        background-size: cover;
-        background-repeat: no-repeat;
     }
 
     .btn-large-data {
@@ -97,37 +69,4 @@
             background-position: right center;
         }
     }
-
-    .frosted:before {
-        content: "";
-        position: absolute;
-        background: inherit;
-        z-index: -1;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        box-shadow: inset 0 0 2000px #0e0e0e;
-        filter: blur(50px);
-        margin: -20px;
-    }
-
-    .frosted {
-        box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .2);
-        border-radius: 5px;
-        position: relative;
-        z-index: 1;
-        background: inherit;
-        overflow: hidden;
-    }
 </style>
-
-<script>
-    import CloudflareAnalyticsComponent from '@/partials/CloudflareAnalyticsComponent.vue'
-
-    export default {
-        components: {
-            CloudflareAnalyticsComponent
-        }
-    }
-</script>
