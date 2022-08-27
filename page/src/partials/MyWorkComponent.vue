@@ -1,7 +1,6 @@
 <template>
-    <div class="card p-0">
-        <!-- <img :src="image" class="img-fluid rounded-top"> -->
-        <div class="card-image" :style="getImage(image)"></div>
+    <div class="card p-0" :style="{ 'min-height': image ? '650px': '0px'}">
+        <div class="card-image" v-if="image" :style="getImage(image)"></div>
         <div class="content">
             <h2 class="content-title">{{title}}</h2>
             <div v-if="job && time">
@@ -9,7 +8,7 @@
                 <h5 class="m-0">{{time}}</h5>
             </div>
             <p class="text-muted">{{description}}</p>
-            <div class="text-right">
+            <div class="text-right" v-if="url">
                 <a target="_blank" :href="url" class="btn">Visit site</a>
             </div>
         </div>
@@ -17,10 +16,6 @@
 </template>
 
 <style lang="scss" scoped>
-    .card {
-        min-height: 650px;
-    }
-
     .content-title {
         font-family: inherit !important;
     }
