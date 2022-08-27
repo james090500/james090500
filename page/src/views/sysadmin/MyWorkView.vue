@@ -71,7 +71,7 @@
                         content: "BTEC Level 3 Extended Diploma in computing",
                     },
                     {
-                        title: "System3 Business Solutions (2018 - Present)",
+                        title: "System 3 Business Solutions (2018 - Present)",
                         content: "Support Technician in an established Microsoft Gold certified business IT services company based in East Anglia .",
                     }
                 ]

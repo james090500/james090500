@@ -11,11 +11,11 @@
                     MinecraftCapes is a mod for Minecraft to allow users to wear any cape on their character for free. It also offers the ability to purchase animated or glistening capes for a small price each.
                 </p>
                 <p>
-                    The design and concept is fairly simple, users register on the website and upload a cape they like. They then install the mod on their minecraft client and everything works.
+                    The design and concept are fairly simple, users register on the website and upload a cape they like. They then install the mod on their Minecraft client and everything works.
                 </p>
                 <p>
-                    In a development sence it can be a little complicated, each time a player is loaded by the client it will send out a request to the website server to load their contents and then cache them
-                    for the duration of the game. This helps stop repitive request to the API to keep it stable. Once a web request is made, the server uses the player UUID to look for their textures. If it
+                    In a development sense it can be a little complicated, each time a player is loaded by the client it will send out a request to the website server to load their contents and then cache them
+                    for the duration of the game. This helps stop repetitive request to the API to keep it stable. Once a web request is made, the server uses the player UUID to look for their textures. If it
                     finds their textures it will then contact the SQL database to look for any of the features mention above that they have purchased. Once all this is done the response is cached in redis and
                     returned to the client. You can see my profile <a target="_blank" href="https://minecraftcapes.net/profile/ba4161c03a42496c8ae07d13372f3371">here</a>.
                 </p>

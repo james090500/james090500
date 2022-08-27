@@ -6,7 +6,14 @@ import SysAdmin from '@/views/SysAdmin.vue'
 const routes = [
     {
         path: '/',
-        alias: '/webdev',
+        name: 'home',
+        meta: {
+            title: 'Home'
+        },
+        component: null
+    },
+    {
+        path: '/webdev',
         name: 'webdev',
         meta: {
             title: 'Web Developer'

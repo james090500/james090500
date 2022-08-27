@@ -38,24 +38,21 @@
                 </div>
                 <div class="col-md-5 p-20 p-md-0">
                     <p>
-                        I first started programming with Java in 2016 for MinecraftCapes. Since then I have broadened my knowlodge with various languages, libraries, packages and operating systems.
+                        I studied a BTEC Level 3 Extended Diploma in Computer between 2016 and 2018. During my time in education, I was required to have unpaid work experience
+                        which is when I first started at System 3. Once my education was completed, I moved Full Time at System 3 as a Support Technician.
                     </p>
                     <p>
-                        Most my experience is as a full stack developer. I am confident in server side languages such as PHP as well as key libraries such as Laravel.
-                        I also am extremely confident in HTML, CSS and JavaScript with my choice of framework being VueJS to create seemless single page applications.
+                        My role includes answering phone, emails and tickets from customers and helping them resolve any issues they face. I also frequently visit site to deploy new
+                        equipment or to resolve advanced networking issues.
                     </p>
                     <p>
-                        For example MinecraftCapes, which is my largest ongoing project, is hosted on a Debian VPS. I then use Laravel as the backend which is connected to a MySQL database
-                        and also a Redis database for quick caching. MinecraftCapes also uses a Vue SPA so the user can quickly navigate around the website. All of this is behind CloudFlare
-                         to ensure strict caching and security.
+                        I am an experienced and hardworking IT Technician specialising in Microsoft 365, Windows 10/11 and Windows Server. I use many different systems such as DrayTek,
+                        Unifi, Linux, Hyper-V and a wide variety of Microsoft 365 systems such as Azure, SharePoint and Teams to create appropriate, fast and seamless solutions.
+                        I am actively involved in the tech community and a fantastic team player.
                     </p>
                     <p>
-                        I have also recently been learning key web services such as CloudFlare Workers, CloudFlare Pages and R2 Buckets.
+                        In my spare time I enjoy programming, playing games, contributing to various open-source communities and going out with friends.
                     </p>
-                    <p>
-                        <strong>Read more on my experience handling large amounts of API Requests</strong>
-                    </p>
-                    <a class="btn btn-primary btn-large-data" href="#large-data">Read More</a>
                 </div>
             </div>
         </div>

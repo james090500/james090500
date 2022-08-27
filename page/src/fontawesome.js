@@ -4,16 +4,14 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 
 // Brands
 import {
-    faDiscord, faPaypal
+    faDiscord, faGithub, faPaypal
 } from '@fortawesome/free-brands-svg-icons';
-library.add(faDiscord, faPaypal);
+library.add(faDiscord, faPaypal, faGithub);
 
 // Solid
 import {
-    faHouse
+    faHouse, faEnvelope,
 } from '@fortawesome/free-solid-svg-icons'
-library.add(
-    faHouse
-);
+library.add(faHouse, faEnvelope);
 // Export
 export { FontAwesomeIcon, FontAwesomeLayers };

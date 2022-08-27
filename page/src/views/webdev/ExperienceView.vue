@@ -10,14 +10,14 @@
                 </div>
                 <div class="col-md-5 offset-md-1 p-20 p-md-0">
                     <p>
-                        I first started programming with Java in 2016 for MinecraftCapes. Since then I have broadened my knowlodge with various languages, libraries, packages and operating systems.
+                        I first started programming with Java in 2016 for MinecraftCapes. Since then, I have broadened my knowledge with various languages, libraries, packages and operating systems.
                     </p>
                     <p>
-                        Most my experience is as a full stack developer. I am confident in server side languages such as PHP as well as key libraries such as Laravel.
-                        I also am extremely confident in HTML, CSS and JavaScript with my choice of framework being VueJS to create seemless single page applications.
+                        Most my experience is as a full stack developer. I am confident in server-side languages such as PHP as well as key libraries such as Laravel.
+                        I also am extremely confident in HTML, CSS and JavaScript with my choice of framework being VueJS to create seamless single page applications.
                     </p>
                     <p>
-                        For example MinecraftCapes, which is my largest ongoing project, is hosted on a Debian VPS. I then use Laravel as the backend which is connected to a MySQL database
+                        For example, MinecraftCapes, which is my largest ongoing project, is hosted on a Debian VPS. I then use Laravel as the backend which is connected to a MySQL database
                         and also a Redis database for quick caching. MinecraftCapes also uses a Vue SPA so the user can quickly navigate around the website. All of this is behind CloudFlare
                          to ensure strict caching and security.
                     </p>

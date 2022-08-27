@@ -6,6 +6,7 @@
                 <component :is="Component" id="top-item" />
             </transition>
         </router-view>
+        <ContactMe/>
     </main>
 </template>
 
@@ -73,6 +74,7 @@
     import HomeView from '@/views/HomeView.vue'
     import WebDev from '@/views/WebDev.vue';
     import SysAdmin from '@/views/SysAdmin.vue';
+    import ContactMe from '@/views/ContactMe.vue';
 
     export default {
         data() {
@@ -90,11 +92,13 @@
                         document.querySelector('meta[property="twitter:title"]').setAttribute("content", document.title);
                     }
 
-                    let contentWrapper = document.getElementsByClassName('content-wrapper')[0];
-                    let topItem = document.getElementById('top-item')
-                    if(contentWrapper && topItem) {
-                        contentWrapper.scrollTo({ top: topItem.offsetTop, behavior: 'smooth' });
-                    }
+                    setTimeout(() => {
+                        let contentWrapper = document.getElementsByClassName('content-wrapper')[0];
+                        let topItem = document.getElementById('top-item')
+                        if(contentWrapper && topItem) {
+                            contentWrapper.scrollTo({ top: topItem.offsetTop, behavior: 'smooth' });
+                        }
+                    }, 200)
                 },
                 imediate: true
             }
@@ -102,7 +106,8 @@
         components: {
             HomeView,
             WebDev,
-            SysAdmin
+            SysAdmin,
+            ContactMe
         }
     }
 </script>
