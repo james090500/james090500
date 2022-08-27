@@ -1,10 +1,11 @@
 <template>
     <main>
-        <HomeView id="home"/>
-        <MyWorkView id="my-work"/>
-        <ExperienceView/>
-        <LargeData/>
-        <MyAwards/>
+        <HomeView/>
+        <router-view v-slot="{ Component }">
+            <transition>
+                <component :is="Component" id="top-item" />
+            </transition>
+        </router-view>
     </main>
 </template>
 
@@ -56,22 +57,52 @@
         border: none !important;
         padding: 0 3rem !important;
     }
+
+    .v-enter-active,
+    .v-leave-active {
+        transition: opacity 0.5s ease;
+    }
+
+    .v-enter-from,
+    .v-leave-to {
+        opacity: 0;
+    }
 </style>
 
 <script>
     import HomeView from '@/views/HomeView.vue'
-    import MyWorkView from '@/views/MyWorkView.vue'
-    import ExperienceView from '@/views/ExperienceView.vue'
-    import LargeData from '@/views/LargeData.vue'
-    import MyAwards from '@/views/MyAwards.vue'
+    import WebDev from '@/views/WebDev.vue';
+    import SysAdmin from '@/views/SysAdmin.vue';
 
     export default {
+        data() {
+            return {
+                webDev: true
+            }
+        },
+        watch: {
+            $route: {
+                handler: function(to, _from) {
+                    if(to.meta.title != undefined) {
+                        document.title = `James Harrison | ${to.meta.title}`
+                        document.querySelector('meta[name="title"]').setAttribute("content", document.title);
+                        document.querySelector('meta[property="og:title"]').setAttribute("content", document.title);
+                        document.querySelector('meta[property="twitter:title"]').setAttribute("content", document.title);
+                    }
+
+                    let contentWrapper = document.getElementsByClassName('content-wrapper')[0];
+                    let topItem = document.getElementById('top-item')
+                    if(contentWrapper && topItem) {
+                        contentWrapper.scrollTo({ top: topItem.offsetTop, behavior: 'smooth' });
+                    }
+                },
+                imediate: true
+            }
+        },
         components: {
             HomeView,
-            MyWorkView,
-            ExperienceView,
-            LargeData,
-            MyAwards
+            WebDev,
+            SysAdmin
         }
     }
 </script>

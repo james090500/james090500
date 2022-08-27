@@ -2,9 +2,9 @@
     <section class="bg-very-dark">
         <div class="row justify-content-center">
             <div class="col-10 text-center">
-                <h1>My Work</h1>
-                <div class="row">
-                    <div class="col">
+                <h1 class="mb-0">My Work</h1>
+                <div class="row justify-content-center">
+                    <div class="col-md-4">
                         <MyWorkComponent
                             image="https://minecraftcapes.net/images/capes-meta.jpg"
                             title="MinecraftCapes"
@@ -12,7 +12,7 @@
                             url="https://minecraftcapes.net"
                         />
                     </div>
-                    <div class="col">
+                    <div class="col-md-4">
                         <MyWorkComponent
                             image="https://capecraft.net/images/banner.jpg"
                             title="CapeCraft"
@@ -20,7 +20,7 @@
                             url="https://capecraft.net"
                         />
                     </div>
-                    <div class="col">
+                    <div class="col-md-4">
                         <MyWorkComponent
                             image="https://mojangstat.us/assets/meta.jpg"
                             title="MojangStatus"

@@ -3,13 +3,13 @@
         <div class="row justify-content-center">
             <div class="col-md-6 name">
                 <h1>Hi, I'm James Harrison</h1>
-                <h1>Web Developer</h1>
+                <h2>Web Developer and System Administrator</h2>
                 <div class="row mt-20">
                     <div class="col-4 mr-10 text-right">
-                        <a class="btn btn-my-work" href="#my-work">My Work</a>
+                        <router-link class="btn btn-web-developer" to="/webdev">Web Developer</router-link>
                     </div>
                     <div class="col-6">
-                        <a class="btn btn-experience" href="#my-experience">My Experience</a>
+                        <router-link class="btn btn-experience" to="/sysadmin">System Administrator</router-link>
                     </div>
                 </div>
             </div>
@@ -68,9 +68,16 @@
     .name {
         padding-top: 20vh;
 
-        & > h1 {
+        & > h1, h2 {
             animation: 1s ease-out 0s 1 slideInUp;
+        }
+
+        & > h1 {
             font-size: 8rem;
+        }
+
+        & > h2 {
+            font-size: 5rem;
         }
 
         & > h1:last-of-type {
@@ -90,7 +97,7 @@
             }
         }
 
-        .btn-my-work {
+        .btn-web-developer {
             background-position: center;
             transition: 0.5s;
             background-size: 200% auto;
