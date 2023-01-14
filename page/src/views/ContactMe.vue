@@ -25,7 +25,7 @@
     }
 
     .contactme {
-        background-image: url('/svg/contactme.svg');
+        background-image: url('/img/contactme.jpg');
         background-size: cover;
         background-position: center;
         min-height: 10vh;
