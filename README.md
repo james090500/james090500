@@ -2,6 +2,7 @@
     <a href="https://james090500.com">
         <img src="profile/banner-logo.png"/>
     </a>
+    <br>
     <a href="https://twitter.com/james090500">
         <img src="https://img.shields.io/badge/Twitter-3399FF?logo=twitter&logoColor=white&style=for-the-badge">
     </a>
@@ -79,14 +80,14 @@
         <source media="(prefers-color-scheme: light)" srcset="https://github-readme-streak-stats.herokuapp.com/?user=james090500">
         <img/>
     </picture>
-    <table width="100%" border="0">
-        <tbody align="center">
-            <td border="0">
-                <img src="https://github-readme-stats.vercel.app/api?username=james090500&count_private=true&show_icons=true&theme=algolia&hide_border=true"/>
-            </td>
-            <td border="0">
-                <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=james090500&langs_count=3&theme=algolia&hide_border=true"/>
-            </td>
-        </tbody>
-    </table>
 </p>
+<table width="100%" border="0">
+    <tbody align="center">
+        <td border="0">
+            <img src="https://github-readme-stats.vercel.app/api?username=james090500&count_private=true&show_icons=true&theme=algolia&hide_border=true"/>
+        </td>
+        <td border="0">
+            <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=james090500&langs_count=3&theme=algolia&hide_border=true"/>
+        </td>
+    </tbody>
+</table>
