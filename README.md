@@ -19,7 +19,7 @@
 ## 💪 Some of my projects
 <table width="100%" border="0">
     <tbody align="center">
-        <td>
+        <td border="0">
             <a href="https://minecraftcapes.net" target="_blank">
                 <picture>
                     <source media="(prefers-color-scheme: dark)" srcset="profile/card/dark/mcc_card.png">
@@ -28,7 +28,7 @@
                 </picture>
             </a>
         </td>
-        <td>
+        <td border="0">
             <a href="https://capecraft.net" target="_blank">
                 <picture>
                     <source media="(prefers-color-scheme: dark)" srcset="profile/card/dark/cc_card.png">
@@ -37,7 +37,7 @@
                 </picture>
             </a>
         </td>
-        <td>
+        <td border="0">
             <a href="https://mojangstat.us" target="_blank">
                 <picture>
                     <source media="(prefers-color-scheme: dark)" srcset="profile/card/dark/ms_card.png">
@@ -70,10 +70,7 @@
 </picture>
 <br>
 
----
-
-| ![Profile Stats](https://github-readme-stats.vercel.app/api?username=james090500&count_private=true&show_icons=true&theme=algolia&hide_border=true) | ![Top 3 Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=james090500&langs_count=3&theme=algolia&hide_border=true) |
-|--|--|
+<hr>
 
 ## 🔥 My Coding Streaks
 <p align="center">
@@ -82,4 +79,14 @@
         <source media="(prefers-color-scheme: light)" srcset="https://github-readme-streak-stats.herokuapp.com/?user=james090500">
         <img/>
     </picture>
+    <table width="100%" border="0">
+        <tbody align="center">
+            <td border="0">
+                <img src="https://github-readme-stats.vercel.app/api?username=james090500&count_private=true&show_icons=true&theme=algolia&hide_border=true"/>
+            </td>
+            <td border="0">
+                <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=james090500&langs_count=3&theme=algolia&hide_border=true"/>
+            </td>
+        </tbody>
+    </table>
 </p>
