@@ -17,7 +17,7 @@
 </p>
 
 ## 💪 Some of my projects
-<table width="100%">
+<table width="100%" border="0">
     <tbody align="center">
         <td>
             <a href="https://minecraftcapes.net" target="_blank">
