@@ -52,7 +52,7 @@
             }
         },
         created() {
-            this.axios.get('https://api.james090500.com/api/v1/minecraftcapes-analytics').then((response) => {
+            this.axios.get('https://james090500.com/mccapes').then((response) => {
                 if(response.data.error == null) {
                     var array = response.data.data.viewer.zones[0].httpRequests1hGroups
 
