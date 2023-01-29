@@ -1,8 +1,8 @@
 <template>
     <LineChart
         v-if="!loading"
-        :chart-data="chartData"
-        :chart-options="chartOptions"
+        :data="chartData"
+        :options="chartOptions"
     />
 </template>
 
@@ -52,7 +52,7 @@
             }
         },
         created() {
-            this.axios.get('https://james090500.com/mccapes').then((response) => {
+            this.axios.get('/mccapes').then((response) => {
                 if(response.data.error == null) {
                     var array = response.data.data.viewer.zones[0].httpRequests1hGroups
 
@@ -95,9 +95,6 @@
                             pointRadius: 0
                         }]
                     }
-
-                    // Log
-                    console.log(this.dateData, this.totalTrafficData, this.totalCachedData)
 
                     // Open Loading
                     this.loading = false;
