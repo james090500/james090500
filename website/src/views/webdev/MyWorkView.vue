@@ -20,14 +20,6 @@
                             url="https://capecraft.net"
                         />
                     </div>
-                    <div class="col-md-4">
-                        <MyWorkComponent
-                            image="https://mojangstat.us/assets/meta.jpg"
-                            title="MojangStatus"
-                            description="A status page for Mojang and Minecraft APIs. Written using Vue3 hosted on CloudFlare Pages and a JavaScript API using CloudFlare Workers"
-                            url="https://mojangstat.us"
-                        />
-                    </div>
                 </div>
                 <div class="github-stats">
                     <h1>With various Open Source contributions on GitHub</h1>

@@ -38,15 +38,6 @@
                 </picture>
             </a>
         </td>
-        <td border="0">
-            <a href="https://mojangstat.us" target="_blank">
-                <picture>
-                    <source media="(prefers-color-scheme: dark)" srcset="profile/card/dark/ms_card.png">
-                    <source media="(prefers-color-scheme: light)" srcset="profile/card/light/ms_card.png">
-                    <img/>
-                </picture>
-            </a>
-        </td>
     </tbody>
 </table>
 
