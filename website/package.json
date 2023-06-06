@@ -28,7 +28,7 @@
     "eslint": "^8.41.0",
     "eslint-plugin-vue": "^9.14.0",
     "prettier": "^2.8.8",
-    "vite": "^4.3.8",
+    "vite": "^4.3.9",
     "vite-plugin-html": "^3.2.0"
   }
 }
