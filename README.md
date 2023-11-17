@@ -67,8 +67,8 @@
 ## 🔥 My Coding Streaks
 <p align="center">
     <picture>
-        <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-streak-stats.herokuapp.com/?user=james090500&theme=dark">
-        <source media="(prefers-color-scheme: light)" srcset="https://github-readme-streak-stats.herokuapp.com/?user=james090500">
+        <source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com/?user=james090500&theme=algolia">
+        <source media="(prefers-color-scheme: light)" srcset="https://streak-stats.demolab.com/?user=james090500">
         <img/>
     </picture>
 </p>
