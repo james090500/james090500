@@ -8,7 +8,6 @@ module.exports = {
     "eslint:recommended"
   ],
   "globals": {
-    "halfmoon": "readonly",
     "axios": "readonly"
   }
 }

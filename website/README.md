@@ -5,7 +5,7 @@ This is my personal website. It's build use Vue 3 and runs on [Cloudflare Pages]
 ## Built With
 *  Vue 3 - Web Framework
 
-*  [Halfmoon](https://www.gethalfmoon.com/) - CSS/JS Styling
+*  [Bootstrap](https://www.getbootstrap.com/) - CSS/JS Styling
 
 *  Axios - Promise based HTTP client
 

@@ -1,24 +1,26 @@
 <template>
     <section class="bg-very-dark">
-        <div class="row justify-content-center">
-            <div class="col-10 text-center">
-                <h1 class="mb-0">My Work</h1>
-                <div class="row justify-content-center">
-                    <div class="col-md-4">
-                        <MyWorkComponent
-                            title="College of West Anglia"
-                            job="BTEC Level 3 Extended Diploma in computing"
-                            time="2016 - 2018"
-                            description="Passed with a DDM"
-                        />
-                    </div>
-                    <div class="col-md-4">
-                        <MyWorkComponent
-                            title="System 3 Business Solutions"
-                            job="Support Technician"
-                            time="2018 - Present"
-                            description="System 3 is an established Microsoft Gold certified business IT services company based in East Anglia."
-                        />
+        <div class="container-fluid">
+            <div class="row justify-content-center">
+                <div class="col-10 text-center">
+                    <h1 class="mb-0">My Work</h1>
+                    <div class="row justify-content-center">
+                        <div class="col-md-4">
+                            <MyWorkComponent
+                                title="College of West Anglia"
+                                job="BTEC Level 3 Extended Diploma in computing"
+                                time="2016 - 2018"
+                                description="Passed with a DDM"
+                            />
+                        </div>
+                        <div class="col-md-4">
+                            <MyWorkComponent
+                                title="System 3 Business Solutions"
+                                job="Support Technician"
+                                time="2018 - Present"
+                                description="System 3 is an established Microsoft Gold certified business IT services company based in East Anglia."
+                            />
+                        </div>
                     </div>
                 </div>
             </div>

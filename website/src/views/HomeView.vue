@@ -1,11 +1,11 @@
 <template>
-    <section class="header">
+    <section class="header container-fluid">
         <div class="row justify-content-center">
             <div class="col-md-6 name">
                 <h1>Hi, I'm James Harrison</h1>
                 <h2>Web Developer and System Administrator</h2>
                 <div class="row mt-20">
-                    <div class="col-4 mr-10 text-right">
+                    <div class="col-4 mr-10 text-end">
                         <router-link class="btn btn-web-developer" to="/webdev">Web Developer</router-link>
                     </div>
                     <div class="col-6">
@@ -107,5 +107,9 @@
                 background-position: top left;
             }
         }
+    }
+
+    .card {
+        border: 0 !important;
     }
 </style>

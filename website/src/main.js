@@ -9,12 +9,7 @@ import Router from './router'
 app.use(Router);
 
 // Halfmoon
-import halfmoon from "halfmoon";
-import "halfmoon/css/halfmoon.min.css"
-window.halfmoon = halfmoon;
-document.addEventListener("DOMContentLoaded", () => {
-    halfmoon.onDOMContentLoaded();
-});
+import "bootstrap/dist/css/bootstrap.min.css";
 
 // Font Awesome
 import { FontAwesomeIcon, FontAwesomeLayers } from './fontawesome'

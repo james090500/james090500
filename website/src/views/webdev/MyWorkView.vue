@@ -1,10 +1,10 @@
 <template>
-    <section class="bg-very-dark">
+    <section class="bg-very-dark container-fluid">
         <div class="row justify-content-center">
             <div class="col-10 text-center">
                 <h1 class="mb-0">My Work</h1>
                 <div class="row justify-content-center">
-                    <div class="col-md-4">
+                    <div class="col-md-4 p-4">
                         <MyWorkComponent
                             image="https://minecraftcapes.net/images/capes-meta.jpg"
                             title="MinecraftCapes"
@@ -12,7 +12,7 @@
                             url="https://minecraftcapes.net"
                         />
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-4 p-4">
                         <MyWorkComponent
                             image="https://capecraft.net/images/banner.jpg"
                             title="CapeCraft"
@@ -24,7 +24,7 @@
                 <div class="github-stats">
                     <h1>With various Open Source contributions on GitHub</h1>
                     <a href="https://github.com/james090500" target="_blank">
-                        <img class="w-full w-md-half" src="https://github-readme-stats.vercel.app/api?username=james090500&count_private=true&show_icons=true&theme=algolia&hide_border=true"/>
+                        <img class="w-50" src="https://github-readme-stats.vercel.app/api?username=james090500&count_private=true&show_icons=true&theme=algolia&hide_border=true"/>
                     </a>
                 </div>
             </div>

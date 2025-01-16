@@ -55,8 +55,25 @@
     }
 
     .btn {
-        border: none !important;
-        padding: 0 3rem !important;
+        padding: 0.5rem 3rem !important;
+        font-size: 1.4rem !important;
+    }
+
+    body {
+        font-size: 1.4rem !important;
+        background-color: #25282c !important;
+    }
+
+    h4 {
+        font-size: 2.4rem !important;
+    }
+
+    .bg-dark {
+        background-color: #191c20 !important
+    }
+
+    .bg-very-dark {
+        background-color: #111417 !important
     }
 
     .v-enter-active,
@@ -93,10 +110,9 @@
                     }
 
                     setTimeout(() => {
-                        let contentWrapper = document.getElementsByClassName('content-wrapper')[0];
                         let topItem = document.getElementById('top-item')
-                        if(contentWrapper && topItem) {
-                            contentWrapper.scrollTo({ top: topItem.offsetTop, behavior: 'smooth' });
+                        if(topItem) {
+                            topItem.scrollIntoView()
                         }
                     }, 200)
                 },

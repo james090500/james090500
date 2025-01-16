@@ -4,13 +4,13 @@
             <h1 class="text-center mb-0">Contact Me</h1>
             <p class="text-center mt-0">Hire, Enquire or Chat</p>
             <div class="pt-10 text-center">
-                <button class="btn btn-discord mr-10">
-                    <font-awesome-icon :icon="['fab', 'discord']"/> james090500#0001
+                <button class="btn btn-discord me-3">
+                    <font-awesome-icon :icon="['fab', 'discord']"/> james090500
                 </button>
                 <a href="https://github.com/james090500" target="_blank" class="btn btn-github">
                     <font-awesome-icon :icon="['fab', 'github']"/> james090500
                 </a>
-                <a href="mailto:james@fasttortoise.co.uk" class="btn btn-primary ml-10">
+                <a href="mailto:james@fasttortoise.co.uk" class="btn btn-primary ms-3">
                     <font-awesome-icon icon="envelope"/> james@fasttortoise.co.uk
                 </a>
             </div>
