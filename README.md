@@ -3,8 +3,8 @@
         <img src="profile/banner-logo.png"/>
     </a>
     <br>
-    <a href="https://twitter.com/james090500">
-        <img src="https://img.shields.io/badge/Twitter-3399FF?logo=twitter&logoColor=white&style=for-the-badge">
+    <a href="https://x.com/james090500">
+        <img src="https://img.shields.io/badge/X-000000?logo=twitter&logoColor=white&style=for-the-badge">
     </a>
     <a href="https://youtube.com/james090500">
         <img src="https://img.shields.io/badge/Youtube-FF0000?logo=youtube&logoColor=white&style=for-the-badge">
