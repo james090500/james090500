@@ -3,13 +3,15 @@
         <div class="container-fluid">
             <div class="row justify-content-center">
                 <div class="col-10 text-center">
-                    <h1 class="mb-0">My Work</h1>
+                    <h1 class="mb-0">
+                        My Work
+                    </h1>
                     <div class="row justify-content-center">
                         <div class="col-md-4">
                             <MyWorkComponent
                                 title="College of West Anglia"
                                 job="BTEC Level 3 Extended Diploma in computing"
-                                time="2016 - 2018"
+                                time="Sep 2016 - July 2018"
                                 description="Passed with a DDM"
                             />
                         </div>
@@ -17,8 +19,16 @@
                             <MyWorkComponent
                                 title="System 3 Business Solutions"
                                 job="Support Technician"
-                                time="2018 - Present"
+                                time="July 2018 - June 2025"
                                 description="System 3 is an established Microsoft Gold certified business IT services company based in East Anglia."
+                            />
+                        </div>
+                        <div class="col-md-4">
+                            <MyWorkComponent
+                                title="Kalsec Inc"
+                                job="IS Support Specialist"
+                                time="June 2025 - Present"
+                                description="Kalsec is a producer of Food Ingredients for Natural Food Protection, Taste & Sensory, Colors and Hop Solutions"
                             />
                         </div>
                     </div>

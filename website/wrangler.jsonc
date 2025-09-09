@@ -1,0 +1,15 @@
+{
+    "name": "james090500",
+    "compatibility_date": "2025-09-09",
+    "main": "./dist/worker/index.js",
+    "assets": {
+        "directory": "./dist/client/",
+        "not_found_handling": "single-page-application"
+    },
+    "routes": [
+        {
+            "pattern": "james090500.com",
+            "custom_domain": true
+        }
+    ]
+}

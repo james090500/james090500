@@ -6,15 +6,19 @@
                 <h2>Web Developer and System Administrator</h2>
                 <div class="row mt-20">
                     <div class="col-4 mr-10 text-end">
-                        <router-link class="btn btn-web-developer" to="/webdev">Web Developer</router-link>
+                        <router-link class="btn btn-web-developer" to="/webdev">
+                            Web Developer
+                        </router-link>
                     </div>
                     <div class="col-6">
-                        <router-link class="btn btn-experience" to="/sysadmin">System Administrator</router-link>
+                        <router-link class="btn btn-experience" to="/sysadmin">
+                            System Administrator
+                        </router-link>
                     </div>
                 </div>
             </div>
             <div class="col-md-4 offset-md-1 offset-lg-0 image">
-                <img class="w-three-quarter img-fluid border shadow-lg rounded" src="/img/james-header.jpg"/>
+                <img class="w-three-quarter img-fluid border shadow-lg rounded" src="/img/james-header.jpg">
             </div>
         </div>
     </section>

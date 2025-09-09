@@ -1,8 +1,8 @@
 import { createApp } from "vue";
 
 // Create the app
-import james090500 from "@/james090500.vue";
-const app = createApp(james090500);
+import MainPage from "@/MainPage.vue";
+const app = createApp(MainPage);
 
 //Router
 import Router from './router'

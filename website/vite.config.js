@@ -1,16 +1,28 @@
-import { fileURLToPath, URL } from 'node:url'
-import process  from 'node:process'
-
 import { defineConfig } from 'vite'
-import { createHtmlPlugin } from 'vite-plugin-html'
+import { cloudflare } from "@cloudflare/vite-plugin";
+import { fileURLToPath, URL } from "url";
 import vue from '@vitejs/plugin-vue'
+import eslint from 'vite-plugin-eslint'
 
 // https://vitejs.dev/config/
 export default defineConfig({
     plugins: [
+        cloudflare(),
         vue(),
-        createHtmlPlugin({ inject: { data: { BASE_URL: process.env.CF_PAGES_URL ?? "http://localhost:5173" }}})
+        eslint()
     ],
+    //TODO Remove - https://github.com/twbs/bootstrap/issues/40621
+    css: {
+        preprocessorOptions: {
+            scss: {
+                silenceDeprecations: [
+                    "color-functions",
+                    "global-builtin",
+                    "import"
+                ]
+            },
+        },
+    },
     resolve: {
         alias: {
             '@': fileURLToPath(new URL('./src', import.meta.url))

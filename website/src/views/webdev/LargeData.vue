@@ -1,11 +1,15 @@
 <template>
     <div class="large-data">
-        <h1 class="text-center mb-0" id="large-data">Large Data Handling</h1>
-        <p class="text-center mt-0">A Review on a High Performance and High Usage API</p>
+        <h1 class="text-center mb-0" id="large-data">
+            Large Data Handling
+        </h1>
+        <p class="text-center mt-0">
+            A Review on a High Performance and High Usage API
+        </p>
         <div class="container-fluid">
             <div class="pt-20 row justify-content-center">
                 <div class="col-md-5">
-                    <CloudflareAnalyticsComponent class="h-full rounded bg-dark shadow-lg"/>
+                    <CloudflareAnalyticsComponent class="h-full rounded bg-dark shadow-lg" />
                 </div>
                 <div class="col-md-4 offset-md-1 px-20">
                     <p>

@@ -1,13 +1,21 @@
 <template>
     <div class="card p-0" :style="{ 'min-height': image ? '650px': '0px'}">
-        <div class="card-image" v-if="image" :style="getImage(image)"></div>
+        <div class="card-image" v-if="image" :style="getImage(image)" />
         <div class="content p-4">
-            <h2 class="content-title p-4">{{title}}</h2>
+            <h2 class="content-title p-4">
+                {{ title }}
+            </h2>
             <div v-if="job && time">
-                <h4 class="m-0">{{job}}</h4>
-                <h5 class="m-0">{{time}}</h5>
+                <h4 class="m-0">
+                    {{ job }}
+                </h4>
+                <h5 class="m-0">
+                    {{ time }}
+                </h5>
             </div>
-            <p class="text-muted p-4">{{description}}</p>
+            <p class="text-muted p-4">
+                {{ description }}
+            </p>
             <div class="text-end px-4" v-if="url">
                 <a target="_blank" :href="url" class="btn btn-secondary text-end">Visit site</a>
             </div>

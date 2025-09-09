@@ -1,9 +1,9 @@
 <template>
     <section>
-        <MyWorkView/>
-        <ExperienceView/>
-        <LargeData/>
-        <MyAwards/>
+        <MyWorkView />
+        <ExperienceView />
+        <LargeData />
+        <MyAwards />
     </section>
 </template>
 

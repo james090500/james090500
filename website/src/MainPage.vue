@@ -1,12 +1,12 @@
 <template>
     <main>
-        <HomeView/>
+        <HomeView />
         <router-view v-slot="{ Component }">
             <transition>
                 <component :is="Component" id="top-item" />
             </transition>
         </router-view>
-        <ContactMe/>
+        <ContactMe />
     </main>
 </template>
 

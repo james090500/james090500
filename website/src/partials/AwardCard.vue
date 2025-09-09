@@ -2,7 +2,7 @@
     <div class="text-center border rounded shadow-lg p-5 mx-4 bg-very-dark">
         <img class="w-50" :src="img">
         <a target="_blank" :href="url">
-            <h4>{{name}}</h4>
+            <h4>{{ name }}</h4>
         </a>
     </div>
 </template>
@@ -15,6 +15,19 @@
 
 <script>
     export default {
-        props: [ 'img', 'name', 'url' ]
+        props: {
+            img: {
+                type: String,
+                default: ''
+            },
+            name: {
+                type: String,
+                default: ''
+            },
+            url: {
+                type: String,
+                default: ''
+            }
+        }
     }
 </script>

@@ -1,9 +1,13 @@
 <template>
     <section>
-        <div class="experience-start"></div>
+        <div class="experience-start" />
         <div class="experience" id="my-experience">
-            <h1 class="text-center mb-0">My Experience</h1>
-            <p class="text-center mt-0">PHP, SQL, VueJS, HTML, CSS, JavaScript, Java, PowerShell, NodeJS</p>
+            <h1 class="text-center mb-0">
+                My Experience
+            </h1>
+            <p class="text-center mt-0">
+                PHP, SQL, VueJS, HTML, CSS, JavaScript, Java, PowerShell, NodeJS
+            </p>
             <div class="container-fluid">
                 <div class="row justify-content-center pt-10">
                     <div class="col-md-2 p-5 p-md-0">

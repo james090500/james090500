@@ -1,17 +1,24 @@
 <template>
     <section>
         <div class="contactme">
-            <h1 class="text-center mb-0">Contact Me</h1>
-            <p class="text-center mt-0">Hire, Enquire or Chat</p>
+            <h1 class="text-center mb-0">
+                Contact Me
+            </h1>
+            <p class="text-center mt-0">
+                Hire, Enquire or Chat
+            </p>
             <div class="pt-10 text-center">
                 <button class="btn btn-discord me-3">
-                    <font-awesome-icon :icon="['fab', 'discord']"/> james090500
+                    <font-awesome-icon :icon="['fab', 'discord']" /> james090500
                 </button>
-                <a href="https://github.com/james090500" target="_blank" class="btn btn-github">
-                    <font-awesome-icon :icon="['fab', 'github']"/> james090500
+                <a href="https://github.com/james090500" target="_blank" class="btn btn-github me-3">
+                    <font-awesome-icon :icon="['fab', 'github']" /> james090500
                 </a>
-                <a href="mailto:james@fasttortoise.co.uk" class="btn btn-primary ms-3">
-                    <font-awesome-icon icon="envelope"/> james@fasttortoise.co.uk
+                <a href="https://www.linkedin.com/in/james090500/" target="_blank" class="btn btn-linkedin me-3">
+                    <font-awesome-icon :icon="['fab', 'linkedin']" /> James Harrison
+                </a>
+                <a href="mailto:james@fasttortoise.co.uk" class="btn btn-primary">
+                    <font-awesome-icon icon="envelope" /> james@fasttortoise.co.uk
                 </a>
             </div>
         </div>
@@ -46,6 +53,15 @@
 
         &:active {
             background-color: #454FBF !important;
+        }
+    }
+
+    .btn-linkedin {
+        background-color: #0A66C2 !important;
+        border-color: #0959aa !important;
+
+        &:active {
+            background-color: #0959aa !important;
         }
     }
 

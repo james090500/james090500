@@ -4,9 +4,9 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 
 // Brands
 import {
-    faDiscord, faGithub, faPaypal
+    faDiscord, faGithub, faLinkedin,
 } from '@fortawesome/free-brands-svg-icons';
-library.add(faDiscord, faPaypal, faGithub);
+library.add(faDiscord, faGithub, faLinkedin);
 
 // Solid
 import {

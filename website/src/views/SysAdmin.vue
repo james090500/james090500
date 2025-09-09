@@ -1,8 +1,8 @@
 <template>
     <section>
-        <MyWorkView/>
-        <ExperienceView/>
-        <MyAwards/>
+        <MyWorkView />
+        <ExperienceView />
+        <MyAwards />
     </section>
 </template>
 

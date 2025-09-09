@@ -2,7 +2,9 @@
     <section class="bg-very-dark container-fluid">
         <div class="row justify-content-center">
             <div class="col-10 text-center">
-                <h1 class="mb-0">My Work</h1>
+                <h1 class="mb-0">
+                    My Work
+                </h1>
                 <div class="row justify-content-center">
                     <div class="col-md-4 p-4">
                         <MyWorkComponent
@@ -24,7 +26,7 @@
                 <div class="github-stats">
                     <h1>With various Open Source contributions on GitHub</h1>
                     <a href="https://github.com/james090500" target="_blank">
-                        <img class="w-50" src="https://github-readme-stats.vercel.app/api?username=james090500&count_private=true&show_icons=true&theme=algolia&hide_border=true"/>
+                        <img class="w-50" src="https://github-readme-stats.vercel.app/api?username=james090500&count_private=true&show_icons=true&theme=algolia&hide_border=true">
                     </a>
                 </div>
             </div>
