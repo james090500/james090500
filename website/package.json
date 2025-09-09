@@ -4,8 +4,7 @@
     "type": "module",
     "scripts": {
         "dev": "vite dev",
-        "build": "npm run function && vite build",
-        "function": "wrangler pages functions build --outdir=./dist/worker/",
+        "build": "vite build",
         "lint": "eslint --fix src/**"
     },
     "dependencies": {

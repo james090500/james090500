@@ -21,8 +21,8 @@
                     <p>
                         In a development sense it can be a little complicated, each time a player is loaded by the client it will send out a request to the website server to load their contents and then cache them
                         for the duration of the game. This helps stop repetitive request to the API to keep it stable. Once a web request is made, the server uses the player UUID to look for their textures. If it
-                        finds their textures it will then contact the SQL database to look for any of the features mention above that they have purchased. Once all this is done the response is cached in redis and
-                        returned to the client. You can see my profile <a target="_blank" href="https://minecraftcapes.net/profile/ba4161c03a42496c8ae07d13372f3371">here</a>.
+                        finds their textures it will then contact the MongoDB database to look for any of the features mention above that they have purchased. Once all this is done the response is cached in redis and
+                        returned to the client. You can see my profile <a target="_blank" href="https://api.minecraftcapes.net/profile/ba4161c03a42496c8ae07d13372f3371">here</a>.
                     </p>
                     <p>
                         A long side Redis caching, we also use CloudFlare to help cache the responses in their data centres further reducing load on the system. This is useful especially when we are reach requests
