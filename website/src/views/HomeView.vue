@@ -4,116 +4,126 @@
             <div class="col-md-6 name">
                 <h1>Hi, I'm James Harrison</h1>
                 <h2>Web Developer and System Administrator</h2>
-                <div class="row mt-20">
-                    <div class="col-4 mr-10 text-end">
-                        <router-link class="btn btn-web-developer" to="/webdev">
-                            Web Developer
-                        </router-link>
-                    </div>
-                    <div class="col-6">
-                        <router-link class="btn btn-experience" to="/sysadmin">
-                            System Administrator
-                        </router-link>
-                    </div>
+                <div class="mt-20">
+                    <router-link
+                        class="btn btn-web-developer me-3"
+                        to="/webdev"
+                    >
+                        Web Developer
+                    </router-link>
+                    <router-link class="btn btn-experience" to="/sysadmin">
+                        System Administrator
+                    </router-link>
                 </div>
             </div>
             <div class="col-md-4 offset-md-1 offset-lg-0 image">
-                <img class="w-three-quarter img-fluid border shadow-lg rounded" src="/img/james-header.jpg">
+                <img
+                    class="w-three-quarter img-fluid border shadow-lg rounded"
+                    src="/img/james-header.jpg"
+                />
             </div>
         </div>
     </section>
 </template>
 
 <style lang="scss">
-    .header {
-        background-image: url('/svg/home-split.svg');
-        background-position: center;
-        background-size: cover;
+.header {
+    background-image: url('/svg/home-split.svg');
+    background-position: center;
+    background-size: cover;
 
-        height: 100vh;
+    min-height: 100vh;
 
-        & > .row {
-            height: 100%;
-        }
-
+    & > .row {
+        min-height: 100%;
     }
+}
 
-    @media(max-width: 768px) {
-        .image {
-            padding-top: 1rem !important;
-            text-align: center;
-        }
-    }
-
+@media (max-width: 768px) {
     .image {
-        padding-top: 12vh;
-        overflow: hidden;
-
-        & > img {
-            animation: 1s ease-out 0s 1 slideInRight;
-        }
+        padding-top: 1rem !important;
+        text-align: center;
     }
+}
 
-    @media(max-width: 768px) {
-        .name {
-            padding: 1rem;
-            padding-top: 0vh !important;
+.image {
+    padding: 6vh 0;
+    overflow: hidden;
 
-            & > h1 {
-                font-size: 5rem;
-            }
-
-            & > h1:last-of-type {
-                line-height: 8rem !important;
-            }
-        }
+    & > img {
+        animation: 1s ease-out 0s 1 slideInRight;
     }
+}
 
+@media (max-width: 768px) {
     .name {
-        padding-top: 20vh;
-
-        & > h1, h2 {
-            animation: 1s ease-out 0s 1 slideInUp;
-        }
+        padding: 1rem;
+        padding-top: 0vh !important;
 
         & > h1 {
-            font-size: 8rem;
-        }
-
-        & > h2 {
             font-size: 5rem;
         }
 
         & > h1:last-of-type {
-            margin-bottom: 0;
-            padding-bottom: 0;
-            line-height: 5rem;
+            line-height: 8rem !important;
         }
+    }
+}
 
-        .btn-experience {
-            background-position: center;
-            transition: 0.5s;
-            background-size: 200% auto;
-            background-image: linear-gradient(228deg, #178fff 0%, #ab37b9 100%) !important;
+.name {
+    padding-top: 20vh;
 
-            &:hover {
-                background-position: top left;
-            }
-        }
+    & > h1,
+    h2 {
+        animation: 1s ease-out 0s 1 slideInUp;
+    }
 
-        .btn-web-developer {
-            background-position: center;
-            transition: 0.5s;
-            background-size: 200% auto;
-            background-image: linear-gradient(228deg, #dcdf5b 0%, #db470d 100%) !important;
+    & > h1 {
+        font-size: 8rem;
+    }
 
-            &:hover {
-                background-position: top left;
-            }
+    & > h2 {
+        font-size: 5rem;
+    }
+
+    & > h1:last-of-type {
+        margin-bottom: 0;
+        padding-bottom: 0;
+        line-height: 6rem;
+    }
+
+    .btn-experience {
+        background-position: center;
+        transition: 0.5s;
+        background-size: 200% auto;
+        background-image: linear-gradient(
+            228deg,
+            #178fff 0%,
+            #ab37b9 100%
+        ) !important;
+
+        &:hover {
+            background-position: top left;
         }
     }
 
-    .card {
-        border: 0 !important;
+    .btn-web-developer {
+        background-position: center;
+        transition: 0.5s;
+        background-size: 200% auto;
+        background-image: linear-gradient(
+            228deg,
+            #dcdf5b 0%,
+            #db470d 100%
+        ) !important;
+
+        &:hover {
+            background-position: top left;
+        }
     }
+}
+
+.card {
+    border: 0 !important;
+}
 </style>

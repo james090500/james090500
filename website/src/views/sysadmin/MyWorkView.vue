@@ -3,9 +3,7 @@
         <div class="container-fluid">
             <div class="row justify-content-center">
                 <div class="col-10 text-center">
-                    <h1 class="mb-0">
-                        My Work
-                    </h1>
+                    <h1 class="mb-0">My Work</h1>
                     <div class="row justify-content-center">
                         <div class="col-md-4">
                             <MyWorkComponent
@@ -39,38 +37,38 @@
 </template>
 
 <style lang="scss" scoped>
+h1 {
+    font-size: 10rem;
+}
+
+.github-stats {
+    height: 95vh;
+    padding: 5rem;
+    background-image: url('/svg/github-blob.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+@media (max-width: 768px) {
     h1 {
-        font-size: 10rem;
+        font-size: 4rem;
     }
 
     .github-stats {
-        height: 95vh;
-        padding: 5rem;
-        background-image: url("/svg/github-blob.svg");
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
+        padding: 0 !important;
+        background-position: top;
+        height: auto;
     }
-
-    @media(max-width: 768px) {
-        h1 {
-            font-size: 4rem;
-        }
-
-        .github-stats {
-            padding: 0 !important;
-            background-position: top;
-            height: auto;
-        }
-    }
+}
 </style>
 
 <script>
-    import MyWorkComponent from '@/partials/MyWorkComponent.vue'
+import MyWorkComponent from '@/partials/MyWorkComponent.vue'
 
-    export default {
-        components: {
-            MyWorkComponent
-        }
-    }
+export default {
+    components: {
+        MyWorkComponent,
+    },
+}
 </script>

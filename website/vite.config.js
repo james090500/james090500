@@ -1,6 +1,6 @@
 import { defineConfig } from 'vite'
-import { cloudflare } from "@cloudflare/vite-plugin";
-import { fileURLToPath, URL } from "url";
+import { cloudflare } from '@cloudflare/vite-plugin'
+import { fileURLToPath, URL } from 'url'
 import vue from '@vitejs/plugin-vue'
 import eslint from 'vite-plugin-eslint'
 
@@ -9,23 +9,24 @@ export default defineConfig({
     plugins: [
         cloudflare(),
         vue(),
-        eslint()
+        eslint(),
     ],
-    //TODO Remove - https://github.com/twbs/bootstrap/issues/40621
+    //TODO Remove - https://github.com/twbs/bootstrap/issues/40962
     css: {
         preprocessorOptions: {
             scss: {
                 silenceDeprecations: [
-                    "color-functions",
-                    "global-builtin",
-                    "import"
-                ]
+                    'color-functions',
+                    'global-builtin',
+                    'import',
+                    'if-function',
+                ],
             },
         },
     },
     resolve: {
         alias: {
-            '@': fileURLToPath(new URL('./src', import.meta.url))
-        }
-    }
+            '@': fileURLToPath(new URL('./src', import.meta.url)),
+        },
+    },
 })

@@ -11,119 +11,129 @@
 </template>
 
 <style>
-    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
-    h1, h2, h3, h4, h5 {
-        font-family: 'Bebas Neue', cursive;
-    }
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: 'Bebas Neue', cursive;
+}
 
-    .content-wrapper {
-        scroll-behavior: smooth;
-    }
+.content-wrapper {
+    scroll-behavior: smooth;
+}
 
-    @keyframes slideInLeft {
-        0% {
-            opacity: 0;
-            transform: translateX(-100%);
-        }
-        100% {
-            opacity: 1;
-            transform: translateX(0);
-        }
-    }
-
-    @keyframes slideInRight {
-        0% {
-            opacity: 0;
-            transform: translateX(100%);
-        }
-        100% {
-            opacity: 1;
-            transform: translateX(0);
-        }
-    }
-
-    @keyframes slideInUp {
-        0% {
-            opacity: 0;
-            transform: translateY(100%);
-        }
-        100% {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-
-    .btn {
-        padding: 0.5rem 3rem !important;
-        font-size: 1.4rem !important;
-    }
-
-    body {
-        font-size: 1.4rem !important;
-        background-color: #25282c !important;
-    }
-
-    h4 {
-        font-size: 2.4rem !important;
-    }
-
-    .bg-dark {
-        background-color: #191c20 !important
-    }
-
-    .bg-very-dark {
-        background-color: #111417 !important
-    }
-
-    .v-enter-active,
-    .v-leave-active {
-        transition: opacity 0.5s ease;
-    }
-
-    .v-enter-from,
-    .v-leave-to {
+@keyframes slideInLeft {
+    0% {
         opacity: 0;
+        transform: translateX(-100%);
     }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.btn {
+    padding: 0.5rem 3rem !important;
+    font-size: 1.4rem !important;
+}
+
+body {
+    font-size: 1.4rem !important;
+    background-color: #25282c !important;
+}
+
+h4 {
+    font-size: 2.4rem !important;
+}
+
+.bg-dark {
+    background-color: #191c20 !important;
+}
+
+.bg-very-dark {
+    background-color: #111417 !important;
+}
+
+.v-enter-active,
+.v-leave-active {
+    transition: opacity 0.5s ease;
+}
+
+.v-enter-from,
+.v-leave-to {
+    opacity: 0;
+}
 </style>
 
 <script>
-    import HomeView from '@/views/HomeView.vue'
-    import WebDev from '@/views/WebDev.vue';
-    import SysAdmin from '@/views/SysAdmin.vue';
-    import ContactMe from '@/views/ContactMe.vue';
+import HomeView from '@/views/HomeView.vue'
+import WebDev from '@/views/WebDev.vue'
+import SysAdmin from '@/views/SysAdmin.vue'
+import ContactMe from '@/views/ContactMe.vue'
 
-    export default {
-        data() {
-            return {
-                webDev: true
-            }
-        },
-        watch: {
-            $route: {
-                handler: function(to, _from) {
-                    if(to.meta.title != undefined) {
-                        document.title = `James Harrison | ${to.meta.title}`
-                        document.querySelector('meta[name="title"]').setAttribute("content", document.title);
-                        document.querySelector('meta[property="og:title"]').setAttribute("content", document.title);
-                        document.querySelector('meta[property="twitter:title"]').setAttribute("content", document.title);
-                    }
-
-                    setTimeout(() => {
-                        let topItem = document.getElementById('top-item')
-                        if(topItem) {
-                            topItem.scrollIntoView()
-                        }
-                    }, 200)
-                },
-                imediate: true
-            }
-        },
-        components: {
-            HomeView,
-            WebDev,
-            SysAdmin,
-            ContactMe
+export default {
+    data() {
+        return {
+            webDev: true,
         }
-    }
+    },
+    watch: {
+        $route: {
+            handler: function (to, _from) {
+                if (to.meta.title != undefined) {
+                    document.title = `James Harrison | ${to.meta.title}`
+                    document
+                        .querySelector('meta[name="title"]')
+                        .setAttribute('content', document.title)
+                    document
+                        .querySelector('meta[property="og:title"]')
+                        .setAttribute('content', document.title)
+                    document
+                        .querySelector('meta[property="twitter:title"]')
+                        .setAttribute('content', document.title)
+                }
+
+                setTimeout(() => {
+                    const topItem = document.getElementById('top-item')
+                    if (topItem) {
+                        topItem.scrollIntoView()
+                    }
+                }, 200)
+            },
+            imediate: true,
+        },
+    },
+    components: {
+        HomeView,
+        WebDev,
+        SysAdmin,
+        ContactMe,
+    },
+}
 </script>

@@ -75,10 +75,10 @@
 <table width="100%" border="0">
     <tbody align="center">
         <td border="0">
-            <img src="https://github-readme-stats.vercel.app/api?username=james090500&count_private=true&show_icons=true&theme=algolia&hide_border=true"/>
+            <img src="https://github-readme-stats-fast.vercel.app/api?username=james090500&count_private=true&show_icons=true&theme=algolia&hide_border=true"/>
         </td>
         <td border="0">
-            <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=james090500&langs_count=3&theme=algolia&hide_border=true"/>
+            <img src="https://github-readme-stats-fast.vercel.app/api/top-langs/?username=james090500&langs_count=3&theme=algolia&hide_border=true"/>
         </td>
     </tbody>
 </table>

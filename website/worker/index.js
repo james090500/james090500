@@ -1,15 +1,16 @@
 export default {
-  async fetch(request, env, ctx) {
-    const url = new URL(request.url);
+    async fetch(request, env, ctx) {
+        const url = new URL(request.url)
 
-    if (!url.pathname.startsWith("/mccapes")) {
-        return new Response(null, { status: 404 });
-    }
+        if (!url.pathname.startsWith('/mccapes')) {
+            return new Response(null, { status: 404 })
+        }
 
-    const now = new Date().toISOString();
-    const past = new Date(Date.now() - (86400 * 1000)).toISOString();
+        const now = new Date().toISOString()
+        const past = new Date(Date.now() - 86400 * 1000).toISOString()
 
-    const query = { query: `
+        const query = {
+            query: `
       {
         viewer {
           zones(filter: {zoneTag: "${env.CF_ZONE}"}) {
@@ -28,19 +29,25 @@ export default {
         }
       }
     `,
-    variables: {} }
+            variables: {},
+        }
 
-    const response = await fetch("https://api.cloudflare.com/client/v4/graphql", {
-        method: 'POST',
-        headers: {
-            'X-AUTH-EMAIL': env.CF_EMAIL,
-            'Authorization': `Bearer ${env.CF_TOKEN}`
-        },
-        body: JSON.stringify(query)
-    })
+        const response = await fetch(
+            'https://api.cloudflare.com/client/v4/graphql',
+            {
+                method: 'POST',
+                headers: {
+                    'X-AUTH-EMAIL': env.CF_EMAIL,
+                    Authorization: `Bearer ${env.CF_TOKEN}`,
+                },
+                body: JSON.stringify(query),
+            }
+        )
 
-    console.log(env)
+        console.log(env)
 
-    return response.ok ?  Response.json(await response.json()) : new Response("Something went wrong!", { status: 500 });
-  }
+        return response.ok
+            ? Response.json(await response.json())
+            : new Response('Something went wrong!', { status: 500 })
+    },
 }

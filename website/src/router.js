@@ -8,31 +8,31 @@ const routes = [
         path: '/',
         name: 'home',
         meta: {
-            title: 'Home'
+            title: 'Home',
         },
-        component: null
+        component: null,
     },
     {
         path: '/webdev',
         name: 'webdev',
         meta: {
-            title: 'Web Developer'
+            title: 'Web Developer',
         },
-        component: WebDev
+        component: WebDev,
     },
     {
         path: '/sysadmin',
         name: 'sysadmin',
         meta: {
-            title: 'System Administrator'
+            title: 'System Administrator',
         },
-        component: SysAdmin
-    }
+        component: SysAdmin,
+    },
 ]
 
 const router = new createRouter({
     history: createWebHistory(),
-    routes: routes
+    routes: routes,
 })
 
-export default router;
+export default router

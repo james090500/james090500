@@ -1,6 +1,6 @@
 <template>
     <div class="text-center border rounded shadow-lg p-5 mx-4 bg-very-dark">
-        <img class="w-50" :src="img">
+        <img class="w-50" :src="img" />
         <a target="_blank" :href="url">
             <h4>{{ name }}</h4>
         </a>
@@ -8,26 +8,26 @@
 </template>
 
 <style scoped lang="scss">
-    a {
-        cursor: pointer;
-    }
+a {
+    cursor: pointer;
+}
 </style>
 
 <script>
-    export default {
-        props: {
-            img: {
-                type: String,
-                default: ''
-            },
-            name: {
-                type: String,
-                default: ''
-            },
-            url: {
-                type: String,
-                default: ''
-            }
-        }
-    }
+export default {
+    props: {
+        img: {
+            type: String,
+            default: '',
+        },
+        name: {
+            type: String,
+            default: '',
+        },
+        url: {
+            type: String,
+            default: '',
+        },
+    },
+}
 </script>

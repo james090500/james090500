@@ -2,9 +2,7 @@
     <section class="bg-very-dark container-fluid">
         <div class="row justify-content-center">
             <div class="col-10 text-center">
-                <h1 class="mb-0">
-                    My Work
-                </h1>
+                <h1 class="mb-0">My Work</h1>
                 <div class="row justify-content-center">
                     <div class="col-md-4 p-4">
                         <MyWorkComponent
@@ -26,7 +24,10 @@
                 <div class="github-stats">
                     <h1>With various Open Source contributions on GitHub</h1>
                     <a href="https://github.com/james090500" target="_blank">
-                        <img class="w-50" src="https://github-readme-stats.vercel.app/api?username=james090500&count_private=true&show_icons=true&theme=algolia&hide_border=true">
+                        <img
+                            class="w-50"
+                            src="https://github-readme-stats-fast.vercel.app/api/streak?username=james090500&count_private=true&show_icons=true&theme=algolia&hide_border=true"
+                        />
                     </a>
                 </div>
             </div>
@@ -35,38 +36,34 @@
 </template>
 
 <style lang="scss" scoped>
-    h1 {
-        font-size: 10rem;
-    }
+h1 {
+    font-size: 7rem;
+}
 
+.github-stats {
+    height: 95vh;
+    padding: 5rem;
+    background-image: url('/svg/github-blob.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+@media (max-width: 768px) {
     .github-stats {
-        height: 95vh;
-        padding: 5rem;
-        background-image: url("/svg/github-blob.svg");
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center;
+        padding: 0 !important;
+        background-position: top;
+        height: auto;
     }
-
-    @media(max-width: 768px) {
-        h1 {
-            font-size: 4rem;
-        }
-
-        .github-stats {
-            padding: 0 !important;
-            background-position: top;
-            height: auto;
-        }
-    }
+}
 </style>
 
 <script>
-    import MyWorkComponent from '@/partials/MyWorkComponent.vue'
+import MyWorkComponent from '@/partials/MyWorkComponent.vue'
 
-    export default {
-        components: {
-            MyWorkComponent
-        }
-    }
+export default {
+    components: {
+        MyWorkComponent,
+    },
+}
 </script>

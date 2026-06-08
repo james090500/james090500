@@ -9,7 +9,7 @@ This is my personal website. It's build use Vue 3 and runs on [Cloudflare Pages]
 
 *  Axios - Promise based HTTP client
 
-*  Font Awesome - Icons
+*  FontAwesome - Icons
 
 * And some other frameworks for small tweaks
 
