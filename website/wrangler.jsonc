@@ -13,6 +13,10 @@
         {
             "pattern": "james090500.com",
             "custom_domain": true
+        },
+        {
+            "pattern": "jamesharrison.uk",
+            "custom_domain": true
         }
     ]
 }
